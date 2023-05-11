@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="SeesunguideDAO">
+
+	<select id="selectList" resultType="HashMap"
+		parameterType="HashMap">
+		select * from dep where parent_cd is null
+	</select>
+
+	<select id="searchList" resultType="HashMap"
+		parameterType="HashMap">
+		<if test="#{keyword} != null">
+			SELECT
+			1 as depth,
+			dep1.dept_cd,
+			dep1.dept_name,
+			dep1.use_yn,
+			dep1.dept_tag,
+			dep1.parent_cd,
+			dep2.dept_name as parent_name,
+			dep2.dept_tag as parent_tag,
+			dep3.dept_cd as
+			grandparent_cd,
+			dep3.dept_name as grandparent_name
+			FROM
+			dep dep1
+			LEFT
+			JOIN dep dep2 ON dep1.parent_cd = dep2.dept_cd
+			LEFT JOIN dep dep3 ON
+			dep2.parent_cd = dep3.dept_cd
+			WHERE
+			dep3.dept_cd = #{lv1}
+			AND
+			dep1.use_yn = 'Y'
+			AND (replace(dep1.dept_name,' ','') ILIKE
+			replace(concat('%',
+			#{keyword}, '%'),' ','')
+			OR
+			replace(dep2.dept_name,' ','') ILIKE replace(concat('%', #{keyword},
+			'%'),' ',''))
+			ORDER BY
+			dep1.dept_cd;
+
+		</if>
+	</select>
+
+	<select id="sampleBodyList" resultType="HashMap"
+		parameterType="HashMap">
+		SELECT
+		1 as depth,
+		dep1.dept_cd,
+		dep1.dept_name,
+		dep1.use_yn,
+		dep1.dept_tag,
+		dep1.parent_cd,
+		dep2.dept_name as parent_name,
+		dep3.dept_cd
+		as grandparent_cd,
+		dep3.dept_name as grandparent_name
+		FROM
+		dep dep1
+		LEFT
+		JOIN dep dep2 ON dep1.parent_cd = dep2.dept_cd
+		LEFT JOIN dep dep3 ON
+		dep2.parent_cd = dep3.dept_cd
+		WHERE
+		dep3.dept_cd = #{lv1}
+		AND dep1.use_yn
+		= 'Y'
+		AND (replace(dep1.dept_name,' ','') ILIKE replace(concat('%', '',
+		'%'),'
+		','')
+		OR replace(dep2.dept_name,' ','') ILIKE replace(concat('%',
+		'', '%'),'
+		',''))
+		ORDER BY
+		dep1.dept_cd;
+
+	</select>
+
+</mapper>

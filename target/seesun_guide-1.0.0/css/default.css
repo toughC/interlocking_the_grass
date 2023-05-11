@@ -1,0 +1,136 @@
+@charset "UTF-8";
+
+/* --------------------------------------------poppins */
+@font-face {
+	font-family: 'poppins';
+	font-style: normal;
+	font-weight: 800;
+	src: url('../font/en/Poppins-Bold.ttf') format('truetype'),
+		 url('../font/en/Poppins-Bold.otf') format('opentype'),
+		 url('../font/en/Poppins-Bold.woff') format('woff'),  
+		 url('../font/en/Poppins-Bold.woff2') format('woff2');  
+}
+@font-face {
+	font-family: 'poppins';
+	font-style: normal;
+	font-weight: 700;
+	src:  url('../font/en/Poppins-SemiBold.ttf') format('truetype'), 
+		 url('../font/en/Poppins-SemiBold.otf') format('opentype'),
+		 url('../font/en/Poppins-SemiBold.woff') format('woff'),  
+		 url('../font/en/Poppins-SemiBold.woff2') format('woff2');  
+}
+@font-face {
+	font-family: 'poppins';
+	font-style: normal;
+	font-weight: 600;
+	src: url('../font/en/Poppins-Medium.ttf') format('truetype'),
+		 url('../font/en/Poppins-Medium.otf') format('opentype'),
+		 url('../font/en/Poppins-Medium.woff') format('woff'),  
+		 url('../font/en/Poppins-Medium.woff2') format('woff2');  
+}
+@font-face {
+	font-family: 'poppins';
+	font-style: normal;
+	font-weight: 500;
+	src: url('../font/en/Poppins-Regular.ttf') format('truetype'),
+		 url('../font/en/Poppins-Regular.otf') format('opentype'),
+		 url('../font/en/Poppins-Regular.woff') format('woff'),  
+		 url('../font/en/Poppins-Regular.woff2') format('woff2');  
+}
+@font-face {
+	font-family: 'poppins';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../font/en/Poppins-Light.ttf') format('truetype'),
+		 url('../font/en/Poppins-Light.otf') format('opentype'),
+		 url('../font/en/Poppins-Light.woff') format('woff'),  
+		 url('../font/en/Poppins-Light.woff2') format('woff2');  
+}
+
+
+/* --------------------------------------------pretendard */
+@font-face {
+	font-family: 'pretendard';
+	font-style: normal;
+	font-weight: 900;
+	src: url('../font/ko/Pretendard-Bold.ttf') format('truetype'), 
+		 url('../font/ko/Pretendard-Bold.otf') format('opentype'),
+		 url('../font/ko/Pretendard-Bold.woff') format('woff'),  
+		 url('../font/ko/Pretendard-Bold.woff2') format('woff2');  
+}
+@font-face {
+	font-family: 'pretendard';
+	font-style: normal;
+	font-weight: 600;
+	src: url('../font/ko/Pretendard-SemiBold.ttf') format('truetype'), 
+		 url('../font/ko/Pretendard-SemiBold.otf') format('opentype'),
+		 url('../font/ko/Pretendard-SemiBold.woff') format('woff'),  
+		 url('../font/ko/Pretendard-SemiBold.woff2') format('woff2');  
+}
+@font-face {
+	font-family: 'pretendard';
+	font-style: normal;
+	font-weight: 500;
+	src: url('../font/ko/Pretendard-Medium.ttf') format('truetype'),
+		 url('../font/ko/Pretendard-Medium.otf') format('opentype'),
+		 url('../font/ko/Pretendard-Medium.woff') format('woff'),  
+		 url('../font/ko/Pretendard-Medium.woff2') format('woff2');  
+}
+@font-face {
+	font-family: 'pretendard';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../font/ko/Pretendard-Regular.ttf') format('truetype'),
+		 url('../font/ko/Pretendard-Regular.otf') format('opentype'),
+		 url('../font/ko/Pretendard-Regular.woff') format('woff'),  
+		 url('../font/ko/Pretendard-Regular.woff2') format('woff2');  
+}
+@font-face {
+	font-family: 'pretendard';
+	font-style: normal;
+	font-weight: 300;
+	src: url('../font/ko/Pretendard-Light.ttf') format('truetype'), 
+		 url('../font/ko/Pretendard-Light.otf') format('opentype'),
+		 url('../font/ko/Pretendard-Light.woff') format('woff'),  
+		 url('../font/ko/Pretendard-Light.woff2') format('woff2');  
+}
+@font-face {
+	font-family: 'pretendard';
+	font-style: normal;
+	font-weight: 200;
+	src: url('../font/ko/Pretendard-ExtraLight.ttf') format('truetype'),
+	     url('../font/ko/Pretendard-ExtraLight.otf') format('opentype'),   
+		 url('../font/ko/Pretendard-ExtraLight.woff') format('woff'),  
+		 url('../font/ko/Pretendard-ExtraLight.woff2') format('woff2');  
+}
+
+/* --------------------------------------------orbitron */
+@font-face {
+	font-family: 'orbitron';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../font/logoFont/Orbitron-Regular.ttf') format('truetype'),  
+		 url('../font/logoFont/Orbitron-Regular.woff') format('woff'),  
+		 url('../font/logoFont/Orbitron-Regular.woff2') format('woff2'),
+		 url('../font/logoFont/Orbitron-Regular.otf') format('opentype');  
+}
+
+/*body 공통속성*/
+body,div,ul,li,dl,dt,dd,ol,p,h1,h2,h3,h4,h5,h6,form {margin:0; padding:0;}
+body {font:200 12px 'pretendard','맑은 고딕','Nanum Gothic','나눔 고딕','돋움',dotum; color:#666666;}
+a, address, blockquote, br, fieldset, legend, label, form, input, select, textarea, button, table, th, td caption, cite, code, dl, dt, dd, h1, h2, h3, h4, h5, h6, p, div, iframe, ul, ol, li, hr, form, img{word-break: keep-all;
+    word-wrap: break-word;margin:0; padding:0;outline:none;}
+button {cursor: pointer; border: none;}
+ul, ol, li {list-style:none;}
+img {border:0; vertical-align:middle;margin:0;padding:0;}
+img, fieldset, iframe{border:0;}
+em, address{font-style:normal;}
+textarea{overflow:auto;outline:none;}
+caption, legend {display:none;}
+input, img, a {vertical-align:middle;outline:none; text-decoration: none;color: #000;}
+.hidden {display: block;  width: 0;  text-indent: -9999px;  overflow: hidden;}
+pre{white-space: normal; margin: 0; padding: 0;}
+figure{margin: 0 0 20px 0; padding: 0;}
+
+/* clearfix */
+.clearfix:after {content: "";display: block;clear: both;}

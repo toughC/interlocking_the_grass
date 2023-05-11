@@ -81,7 +81,8 @@
         </ul>
 		<div id="jsCode" class="tabbody">
 			<figure class="highlight">
-<pre><code class="language-js" data-lang="js">// 레이어를 포함한 지도 객체 생성
+<pre><code class="language-js" data-lang="js">
+// 레이어를 포함한 지도 객체 생성
 var map = new ol.Map({
 		// 지도 레이어를 설정합니다.
 		layers : [ new ol.layer.Tile({
@@ -126,12 +127,15 @@ function animateMap() {
 document.getElementById('moveButton').addEventListener('click', moveMap);
 
 // 애니메이션 버튼에 클릭 이벤트를 추가합니다.
-document.getElementById('animateButton').addEventListener('click', animateMap);</code></pre>
+document.getElementById('animateButton').addEventListener('click', animateMap);
+
+</code></pre>
 			</figure>
 		</div>
 		<div id="htmlCode" class="tabbody" style="display: none;">
 		<figure class="highlight">
-			<pre><code class="language-html" data-lang="html">&lt;!DOCTYPE html&gt;
+			<pre><code class="language-html" data-lang="html">
+&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
 		&lt;meta charset="utf-8"/&gt;
@@ -193,7 +197,9 @@ document.getElementById('animateButton').addEventListener('click', animateMap);<
 		document.getElementById('animateButton').addEventListener('click', animateMap);
 &lt;/script&gt;
 &lt;/body&gt;
-&lt;/html&gt;</code></pre>
+&lt;/html&gt;
+
+</code></pre>
 			</figure>
 		</div>
 	</div>

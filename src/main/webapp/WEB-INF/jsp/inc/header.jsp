@@ -39,17 +39,39 @@
 <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
 <script src="https://openlayers.org/en/v4.6.5/build/ol.js"></script>
 
-<script> function toggleCodeDisplay(codeType) {
-	var jsCode = document.getElementById('jsCode');
-	var htmlCode = document.getElementById('htmlCode');
+<script>
+function toggleCodeDisplay(codeType, button) {
+	  var jsCode = document.getElementById('jsCode');
+	  var htmlCode = document.getElementById('htmlCode');
+	  var jsCodeBtn = document.querySelector('.code-01');
+	  var htmlCodeBtn = document.querySelector('.code-02');
 
-	if (codeType === 'jsCode') {
-		jsCode.style.display = 'block';
-		htmlCode.style.display = 'none';
-	} else if (codeType === 'htmlCode') {
-		jsCode.style.display = 'none';
-		htmlCode.style.display = 'block';
+	  if (codeType === 'jsCode') {
+	    jsCode.style.display = 'block';
+	    htmlCode.style.display = 'none';
+	    jsCodeBtn.style.backgroundColor = '#f3f5f5';
+	    jsCodeBtn.style.color = '#000';
+	    jsCodeBtn.style.borderBottom = '1px solid transparent';
+	    htmlCodeBtn.style.backgroundColor = '#e4e4e4';
+	    htmlCodeBtn.style.color = '#78797a';
+	    htmlCodeBtn.style.borderBottom = 'none';
+	  } else if (codeType === 'htmlCode') {
+	    jsCode.style.display = 'none';
+	    htmlCode.style.display = 'block';
+	    jsCodeBtn.style.backgroundColor = '#e4e4e4';
+	    jsCodeBtn.style.color = '#78797a';
+	    jsCodeBtn.style.borderBottom = 'none';
+	    htmlCodeBtn.style.backgroundColor = '#f3f5f5';
+	    htmlCodeBtn.style.color = '#000';
+	    htmlCodeBtn.style.borderBottom = '1px solid transparent';
+	  }
 	}
-}
+
+document.addEventListener('DOMContentLoaded', function() {
+	  // 초기 상태로 'jsCode'를 선택하도록 설정
+	  toggleCodeDisplay('jsCode', document.querySelector('.code-01'));
+	});
+
 </script>
+
 </head>

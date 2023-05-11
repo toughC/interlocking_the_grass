@@ -124,7 +124,8 @@
         </ul>
 		<div id="jsCode" class="tabbody">
 		<figure class="highlight">
-			<pre><code class="language-js" data-lang="js">// divId로 전달된 요소에 지도를 생성하는 함수
+			<pre><code class="language-js" data-lang="js">
+// divId로 전달된 요소에 지도를 생성하는 함수
 var createMap = function(divId) {
 
 		var source, layer, map, zoomslider;
@@ -161,12 +162,15 @@ var createMap = function(divId) {
 var map1 = createMap('map1');
 
 // createMap 함수를 호출하여, id가 'map2'인 요소에 지도 생성
-var map2 = createMap('map2');</code></pre>
+var map2 = createMap('map2');
+
+</code></pre>
 		</figure>
 	</div>
 	<div id="htmlCode" class="tabbody" style="display: none;">
 	<figure class="highlight">
-		<pre><code class="language-html" data-lang="html">&lt;!DOCTYPE html&gt;
+		<pre><code class="language-html" data-lang="html">
+&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
 		&lt;meta charset="utf-8"/&gt;
@@ -219,7 +223,9 @@ var map2 = createMap('map2');</code></pre>
 		var map2 = createMap('map2');
 &lt;/script&gt;
 &lt;/body&gt;
-&lt;/html&gt;</code></pre>
+&lt;/html&gt;
+
+</code></pre>
 			</figure>
 		</div>
 	</div>

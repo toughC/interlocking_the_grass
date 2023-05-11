@@ -49,7 +49,8 @@
         </ul>
 		<div id="jsCode" class="tabbody">
 			<figure class="highlight">
-<pre><code class="language-js" data-lang="js">// 레이어를 포함한 지도 객체 생성
+<pre><code class="language-js" data-lang="js">
+// 레이어를 포함한 지도 객체 생성
 var map = new ol.Map({
 		// 지도 레이어를 설정합니다.
 		layers : [ new ol.layer.Tile({
@@ -68,12 +69,15 @@ var map = new ol.Map({
 				// 지도의 초기 확대/축소 레벨을 설정합니다.
 				zoom : 17
 		})
-});</code></pre>
+});
+
+</code></pre>
 			</figure>
 		</div>
 		<div id="htmlCode" class="tabbody" style="display: none;">
 			<figure class="highlight">
-				<pre><code class="language-html" data-lang="html">&lt;!DOCTYPE html&gt;
+				<pre><code class="language-html" data-lang="html">
+&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
 		&lt;meta charset="utf-8"/&gt;
@@ -105,7 +109,9 @@ var map = new ol.Map({
 		});
 &lt;/script&gt;
 &lt;/body&gt;
-&lt;/html&gt;</code></pre>
+&lt;/html&gt;
+
+</code></pre>
 			</figure>
 		</div>
 	</div>

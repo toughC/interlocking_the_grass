@@ -7,10 +7,13 @@
   /* 스크롤바 스타일 */
   scrollbar-width: thin;
   scrollbar-color: #ff0000 transparent;
+  /* 상단과 하단에 공백 추가 */
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .hljs-ln-numbers-container::-webkit-scrollbar {
-  width: 3px !important;
+  width: 1px !important;
 }
 
 .hljs-ln-numbers-container::-webkit-scrollbar-thumb {
@@ -55,10 +58,13 @@
   /* 스크롤바 스타일 */
   scrollbar-width: thin;
   scrollbar-color: transparent transparent;
+  /* 상단과 하단에 공백 추가 */
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .hljs-ln-code-container::-webkit-scrollbar {
-  width: 3px !important;
+  width: 1px !important;
 }
 
 .hljs-ln-code-container::-webkit-scrollbar-thumb {

@@ -70,15 +70,18 @@
 				document.getElementById("level").innerHTML = (zoom + 1);
 			}
 		};
+		
 	</script>
-	<div class="wrap_tab">
-        <ul>
-            <li class="code-01" onclick="toggleCodeDisplay('jsCode')">Javascript</li>
-            <li class="code-02" onclick="toggleCodeDisplay('htmlCode')">Javascript + HTML</li>
-        </ul>
-		<div id="jsCode" class="tabbody">
+<div class="wrap_tab">
+  <ul>
+	<li onclick="toggleCodeDisplay('jsCode', this)" class="code-01">Javascript</li>
+    <li onclick="toggleCodeDisplay('htmlCode', this)" class="code-02">Javascript + HTML</li>
+  </ul>
+
+		<div id="jsCode">
 			<figure class="highlight">
-				<pre><code class="language-js" data-lang="js">// 레이어를 포함한 지도 객체 생성
+				<pre><code class="language-js" data-lang="js">
+// 레이어를 포함한 지도 객체 생성
 var map = new ol.Map({
 		// 지도 레이어를 설정합니다.
 		layers : [ new ol.layer.Tile({
@@ -123,12 +126,15 @@ document.getElementById('zoom-in').onclick = function() {
 				view.setZoom(zoom + 1);
 				document.getElementById("level").innerHTML = (zoom + 1);
 		}
-};</code></pre>
+};
+
+</code></pre>
 			</figure>
 		</div>
-		<div id="htmlCode" class="tabbody" style="display: none;">
+		<div id="htmlCode" style="display: none;">
 		<figure class="highlight">
-			<pre><code class="language-html" data-lang="html">&lt;!DOCTYPE html&gt;
+			<pre><code class="language-html" data-lang="html">
+&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
 		&lt;meta charset="utf-8"/&gt;
@@ -192,7 +198,9 @@ document.getElementById('zoom-in').onclick = function() {
 		};
 &lt;/script&gt;
 &lt;/body&gt;
-&lt;/html&gt;</code></pre>
+&lt;/html&gt;
+
+</code></pre>
 			</figure>
 		</div>
 

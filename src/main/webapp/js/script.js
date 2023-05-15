@@ -81,31 +81,45 @@ function get_depth2_3_ids() {
 
 
 function sampleBodyList() {
-	$
-			.ajax({
-				url : "sampleBodyList.do",
-				type : "post",
-				data : {
-					lv1 : encodeURIComponent(pageId)
-				},
-				dataType : "json",
-				success : function(data) {
-					var $container = $(".map-container");
-					var htmlArr = [];
-					for (var i = 0; i < data.length; i++) {
-						var dept_tag = data[i].dept_tag;
-						htmlArr
-								.push(`<li><a class="${data[i].dept_cd}" data-dept-tag="${dept_tag}"><p>더 보기</p></a><div>${data[i].dept_name}</div></li>`);
-					}
-					$container.append(htmlArr.join(''));
-					$container.on("click", "li", function() {
-						var dept_tag = $(this).find("a").data("dept-tag");
-						window.location.href = 'sample/'
-								+ dept_tag.replace(/\s/g, '%20');
-					});
-				}
+	$.ajax({
+		url: "sampleBodyList.do",
+		type: "post",
+		data: {
+			lv1: encodeURIComponent(pageId)
+		},
+		dataType: "json",
+		success: function (data) {
+			var $container = $(".map-container");
+			var htmlArr = [];
+			for (var i = 0; i < data.length; i++) {
+				var dept_tag = data[i].dept_tag;
+				var dept_name = data[i].dept_name;
+				var description = "";
+
+				if (data[i].dept_tag == "basicMap")
+					description = "지도를 생성하는 가장 기본적인 예제입니다.";
+				else if (data[i].dept_tag == "moveMap")
+					description = "지도를 이동시킵니다. 지도 객체의 메소드를 통해 지도를 원하는 좌표로 이동시킬 수 있습니다. 또, 지도가 표시되고 있는 영역크기를 벗어나지 않는 거리라면 애니메이션 효과처럼 지도를 부드럽게 이동시킬 수도 있습니다.";
+				else if (data[i].dept_tag == "changeLevel")
+					description = "지도 레벨을 지도 객체 메소드를 호출해서 변경합니다.";
+				else if (data[i].dept_tag == "mapInfo")
+					description = "지도 레벨, 중심좌표, 지도 타입, 지도 영역정보를 얻어와 표출합니다.";
+				else if (data[i].dept_tag == "addMapControl")
+					description = "일반 지도와 스카이뷰로 지도 타입을 전환할 수 있는 버튼과 지도 확대, 축소를 제어할 수 있는 도구를 쉽게 지도 위에 올릴 수 있습니다. 각각 지도 타입 컨트롤, 지도 줌 컨트롤이라고 부르며, 아래 예제와 같이 지도 위에 표시될 위치를 지정할 수도 있습니다.";
+				else if (data[i].dept_tag == "addMapCustomControl")
+					description = "기본으로 제공하는 지도타입 컨트롤과 줌 컨트롤을 원하는 스타일로 직접 만들 수 있습니다. 컨트롤의 색이나 크기 등을 변경해야 할때 유용하겠지요. 아래 예제의 Javascript+HTML 코드를 참고해보세요.";
+				htmlArr.push(`<li><div class="scrollable-content"><a class="${data[i].dept_cd}" data-dept-tag="${data[i].dept_tag}"><div class="description-container"><p>${description}</p></div></a><div>${dept_name}</div></div></li>`);
+			}
+
+			$container.append(htmlArr.join(''));
+			$container.on("click", "li", function () {
+				var dept_tag = $(this).find("a").data("dept-tag");
+				window.location.href = 'sample/' + dept_tag.replace(/\s/g, '%20');
 			});
+		}
+	});
 }
+
 
 // darkMode 상태를 저장하는 함수
 function saveDarkModeState() {

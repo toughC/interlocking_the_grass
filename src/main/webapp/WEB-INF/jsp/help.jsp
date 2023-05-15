@@ -5,16 +5,13 @@
 
 <!DOCTYPE html>
 <html lang="ko">
-<script>
-	var pageId = 'DE_004';
-	pageName = 'help';
-</script>
+<script>var pageId = 'DE_004', pageName = 'help'</script>
 <c:import url="/WEB-INF/jsp/inc/header.jsp"></c:import>
 <c:import url="/WEB-INF/jsp/inc/body.jsp"></c:import>
 
-<h1>PostgreSQL</h1>
+<h1 id="setpostgre">PostgreSQL</h1>
 <div class="section">
-	<h2>PostgreSQL과 eGovFrame을 연결</h2>
+	<h2 id="linkpostgregovframe">PostgreSQL과 eGovFrame을 연결</h2>
 	<ul class="listStyle-01 row">
 		<li>1. 우선 PostgreSQL 설치를 합니다.</li>
 		<li>2. 경로 설정하고 port 설정합니다.</li>
@@ -43,6 +40,17 @@
 		</li>
 	</ul>
 </div>
+
+
+<div class="section">
+	<h2 id="sqlquery">SQL 쿼리문</h2>
+</div>
+
+<h1 id="setsvn">SVN</h1>
+<div class="section">
+	<h2 id="linkegovframesvn">eGovFrame에서 SVN연결</h2>
+</div>
+
 
 </div>
 </div>

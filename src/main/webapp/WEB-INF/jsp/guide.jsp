@@ -5,9 +5,7 @@
 
 <!DOCTYPE html>
 <html lang="ko">
-<script>
-	var pageId = 'DE_001', pageName = 'guide'
-</script>
+<script>var pageId = 'DE_001', pageName = 'guide'</script>
 <c:import url="/WEB-INF/jsp/inc/header.jsp"></c:import>
 <c:import url="/WEB-INF/jsp/inc/body.jsp"></c:import>
 

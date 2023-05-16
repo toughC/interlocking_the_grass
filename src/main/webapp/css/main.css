@@ -62,7 +62,7 @@ body{height: 100vh;overflow:hidden}
 #content .container .textBox>ul{margin: 22px 36px;}
 #content .container .imgContain{text-indent: 0;}
 #content .container .imgBox{width: 100%; margin-top: 10px; border: solid 2px #d9d9d9; border-radius: 5px; background: #f9f9f9; text-align: center;}
-#content .container .imgBox>img{margin: 25px 30px; border: solid 1px #d9d9d9; max-width: 100%;}
+#content .container .imgBox>img{margin: 6px 19px; max-width: 85%;max-height: 50px;border: solid 1px #d9d9d9;}
 #content .container .tip{margin-top: 10px;}
 #content .container .tip li{line-height: 170% !important; font: 400 16px 'pretendard'; color: #7a7a7a;}
 #content .container .hyperlink{color: #078FDC;}
@@ -205,7 +205,7 @@ body.darkMode .wrap_tab ul .on{background-color: #414141 !important; border-bott
     #content .container .textBox{margin-top: 13px;border-radius: 4px;}
     #content .container .textBox>ul{margin: 14px 23px;}
     #content .container .imgBox{margin-top: 6px; border-radius: 4px;}
-    #content .container .imgBox>img{margin: 16px 19px; max-width: 85%;}
+    #content .container .imgBox>img{margin: 6px 19px; max-width: 85%;max-height: 230px;}
     #content .container .tip{margin-top: 6px;}
     #content .container .tip li{font-size: 10px;}
     #content .move .up{width:25px;height:25px;background-size: 50% !important; background-position: center 8px !important;}
@@ -279,7 +279,7 @@ body.darkMode .wrap_tab ul .on{background-color: #414141 !important; border-bott
     #content .container .mbImgBox{margin: 0;}
     #content .container .mbImgBox li{padding: 0; text-indent: 0;}
     #content .container .imgBox{margin-top: 8px; border:none; background: none;}
-    #content .container .imgBox>img{margin: 0; max-width: 100%;}
+    #content .container .imgBox>img{margin: 3px 0px; max-width: 100%;}
     #content .container .tip{margin-top: 6px;}
     #content .container .tip li{font-size: 13px;}
     #content .move .up{display: none}           

@@ -51,34 +51,40 @@ function get_depth2_3_ids() {
 		async : false,
 		success : function(data)
 		{	
-			var context = "", compare = "";
+			var context = "", compare = [], lv2 =["Methods", "Test.Methods"];
 			console.log(data);
 
 			for (var i = 0; i < data.length; i++) 
 			{	
-				if(compare != data[i].parent_cd)
+				if (!compare.includes(data[i].parent_cd)) 
 				{
 					context += "<a class=title";
 					if(data[i].grandparent_cd != 'DE_002') context += " href=#" + data[i].parent_tag;
 					context += "> " + data[i].parent_name + "</a><ul>";
-					compare = data[i].parent_cd;		
+					compare.push(data[i].parent_cd);
+					lv3 = 1;
 				}
-			
 				context += "<li><a href="
 				if(data[i].grandparent_cd == 'DE_002') context += "sample/" + data[i].dept_tag;
 				else context += "#" + data[i].dept_tag ;
-				context += "><p>" + data[i].dept_name + "</p></a></li>";			    
+				  
+				if(data[i].grandparent_cd == 'DE_003'){
+					if(lv2.includes(data[i].dept_name)){
+						context += "><p style='color: blue;'>" + data[i].dept_name + "</p></a></li>";	
+					}
+					else
+						context += "><p>" + data[i].dept_name + "</p></a></li>";		
+				}
+				else{context += "><p>" + data[i].dept_name + "</p></a></li>";}
 			}
 			context += "</ul>";
-			
+			console.log(compare);
 			$('#menuLv2Lv3').html(context);		
 		},
 
 		error : (e) => console.log(e)
 	}); 		
 }
-
-
 
 function sampleBodyList() {
 	$.ajax({

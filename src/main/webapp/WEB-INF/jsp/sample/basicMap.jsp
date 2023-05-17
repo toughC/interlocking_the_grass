@@ -42,15 +42,15 @@
 		});
 	</script>
 	
-	<div class="wrap_tab">
+	<div class="wrap_tab" >
         <ul>
             <li class="code-01" onclick="toggleCodeDisplay('jsCode')">Javascript</li>
             <li class="code-02" onclick="toggleCodeDisplay('htmlCode')">Javascript + HTML</li>
         </ul>
 		<div id="jsCode" class="tabbody">
 			<figure class="highlight">
-<pre><code class="language-js" data-lang="js">
-// 레이어를 포함한 지도 객체 생성
+<pre><code class="language-js" style="margin-top: 0;" data-lang="js">
+// 레이어를 포함한 지도 객체 생성 
 var map = new ol.Map({
 		// 지도 레이어를 설정합니다.
 		layers : [ new ol.layer.Tile({
@@ -74,9 +74,9 @@ var map = new ol.Map({
 </code></pre>
 			</figure>
 		</div>
-		<div id="htmlCode" class="tabbody" style="display: none;">
+		<div id="htmlCode" class="tabbody">
 			<figure class="highlight">
-				<pre><code class="language-html" data-lang="html">
+				<pre><code class="language-html" style="margin-top: 0;" data-lang="html">
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;

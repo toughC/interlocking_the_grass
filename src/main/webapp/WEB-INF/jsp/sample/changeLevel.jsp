@@ -80,7 +80,7 @@
 
 		<div id="jsCode">
 			<figure class="highlight">
-				<pre><code class="language-js" data-lang="js">
+				<pre><code class="language-js" style="margin-top: 0;" data-lang="js">
 // 레이어를 포함한 지도 객체 생성
 var map = new ol.Map({
 		// 지도 레이어를 설정합니다.
@@ -133,7 +133,7 @@ document.getElementById('zoom-in').onclick = function() {
 		</div>
 		<div id="htmlCode" style="display: none;">
 		<figure class="highlight">
-			<pre><code class="language-html" data-lang="html">
+			<pre><code class="language-html" style="margin-top: 0;" data-lang="html">
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;

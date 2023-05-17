@@ -187,12 +187,7 @@ body.darkMode .wrap_tab ul .on{background-color: #414141 !important; border-bott
     #sideMenu .listGroup:last-child{padding-bottom: 30px;}
 
     #content .container{margin-top: 59px;}
-#content .container code {
-  padding: 2px 5px;
-  margin: 10px 0;
-  border-radius: 0 2px 2px 2px;
-  font-size: 11px;
-}
+	#content .container code {padding: 2px 5px;margin: 10px 0;border-radius: 0 2px 2px 2px;font-size: 11px;}
     #content .container h1{font-size: 19px; border-bottom: 1px solid #ccc; padding-bottom: 18px; /* 아래쪽으로 5px의 padding 추가 */}
     #content .container h2{font-size: 19px; }
     #content .container .section{padding-top: 30px; font-size: 11px;}

@@ -124,7 +124,7 @@
         </ul>
 		<div id="jsCode" class="tabbody">
 		<figure class="highlight">
-			<pre><code class="language-js" data-lang="js">
+			<pre><code class="language-js" style="margin-top: 0;"data-lang="js">
 // divId로 전달된 요소에 지도를 생성하는 함수
 var createMap = function(divId) {
 
@@ -169,7 +169,7 @@ var map2 = createMap('map2');
 	</div>
 	<div id="htmlCode" class="tabbody" style="display: none;">
 	<figure class="highlight">
-		<pre><code class="language-html" data-lang="html">
+		<pre><code class="language-html"style="margin-top: 0;" data-lang="html">
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;

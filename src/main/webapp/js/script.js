@@ -70,7 +70,7 @@ function get_depth2_3_ids() {
 				  
 				if(data[i].grandparent_cd == 'DE_003'){
 					if(lv2.includes(data[i].dept_name)){
-						context += "><p style='color: blue;'>" + data[i].dept_name + "</p></a></li>";	
+						context += "><p style='color: #078FDC;'>" + data[i].dept_name + "</p></a></li>";	
 					}
 					else
 						context += "><p>" + data[i].dept_name + "</p></a></li>";		

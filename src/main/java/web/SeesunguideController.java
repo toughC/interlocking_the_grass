@@ -86,13 +86,26 @@ public class SeesunguideController {
 		return "/docs";
 
 	}
+	@Controller
+	@RequestMapping("/help")
+	public class MapController1 {
 
-	@RequestMapping(value = "help")
+		@GetMapping("")
+		public String help() {
+			System.out.println("샘플 접속");
+			return "help";
+		}
+		@GetMapping("/help/")
+		public String redirect(@PathVariable String path) {
+			return "redirect:/help/";
+		}
+	}
+	/*@RequestMapping(value = "help")
 	public String help() {
 		System.out.println("도움말 접속");
 		return "/help";
 
-	}
+	}*/
 
 	@RequestMapping(value = "/main")
 	public String main() {

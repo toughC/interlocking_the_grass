@@ -50,8 +50,8 @@ body{height: 100vh;overflow:hidden}
 #content .container h1{font: 500 30px 'pretendard'; color: #0b0b0b;}
 #content .container h2{font: 800 30px 'poppins'; color: #0e2436;}
 #content .container li{line-height: 200%;}
-#content .container .section{padding-top: 56px; font: 400 18px 'pretendard'; color: #0b0b0b;}
-#content .container .section:last-child{padding-bottom: 56px;}
+#content .container .section{padding-top: 0px; font: 400 18px 'pretendard'; color: #0b0b0b;}
+#content .container .section:last-child{padding-bottom: 0px;}
 #content .container .row{margin-top: 24px;}
 #content .container .info{margin-top: 30px;}
 #content .container .info p{line-height: 130%; text-indent: -10px; padding-left: 10px;}
@@ -180,7 +180,7 @@ body.darkMode .wrap_tab ul .on{background-color: #414141 !important; border-bott
     #sideMenu .listGroup .title{text-indent: 18px; margin: 13px 0 6px; font-size: 13px;}
     #sideMenu .listGroup .subTitle{margin: 0 17px 0; font-size: 11px; line-height: 22px;}
     #sideMenu .listGroup .line{margin-top: -3px; padding-top: 6px;}
-    #sideMenu .listGroup ul li a{padding: 3px 0; font-size: 10px; line-height: 15px;}
+    #sideMenu .listGroup ul li a{padding: 2px 0; font-size: 10px; line-height: 15px;}
     #sideMenu .listGroup ul li a:hover{font-size: 10px; line-height: 15px;}
     #sideMenu .listGroup ul li a:before{left: 18px; height: 100%; width: 2px; border-width: 2px;}
     #sideMenu .listGroup ul li a p{padding: 0 18px 0 28px;}
@@ -188,10 +188,10 @@ body.darkMode .wrap_tab ul .on{background-color: #414141 !important; border-bott
 
     #content .container{margin-top: 59px;}
 	#content .container code {padding: 2px 5px;margin: 10px 0;border-radius: 0 2px 2px 2px;font-size: 11px;}
-    #content .container h1{font-size: 19px; border-bottom: 1px solid #ccc; padding-bottom: 18px; /* 아래쪽으로 5px의 padding 추가 */}
-    #content .container h2{font-size: 19px; }
-    #content .container .section{padding-top: 30px; font-size: 11px;}
-    #content .container .section:last-child{padding-bottom: 35px;}
+    #content .container h1{font-size: 19px; border-bottom: 1px solid #ccc;padding-top:18px; padding-bottom: 18px; /* 아래쪽으로 5px의 padding 추가 */}
+    #content .container h2{font-size: 19px; padding-top:15px;}
+    #content .container .section{padding-top: 0px; font-size: 11px;}
+    #content .container .section:last-child{padding-bottom: 0px;}
     #content .container .row{margin-top: 15px;}
     #content .container .info{margin-top: 19px;}
     #content .container .listStyle-01{margin-left: 6px;}
@@ -253,7 +253,7 @@ body.darkMode .wrap_tab ul .on{background-color: #414141 !important; border-bott
     #sideMenu .listGroup .title{margin: 0; padding: 8px 0; font-size: 15px; line-height: 24px; text-indent: 26px;}
     #sideMenu .listGroup .subTitle{margin: 0 30px 0; font-size: 15px; line-height: 40px;}
     #sideMenu .listGroup .line{margin: 0 0 0 30px; padding-top: 4px; border-top: solid 1px #aaaaaa;}
-    #sideMenu .listGroup ul li a{padding: 8px 0; font-size: 14px; line-height: 24px;}
+    #sideMenu .listGroup ul li a{padding:  0; font-size: 14px; line-height: 24px;}
     #sideMenu .listGroup ul li a:hover{font-size: 14px; line-height: 24px;}
     #sideMenu .listGroup ul li a:before{display: none; content: ''; position: absolute; left: 28px; height: 100%; width: 3px; border-left: 3px solid #0E2436;}
     #sideMenu .listGroup ul li a:hover:before{display: block;}

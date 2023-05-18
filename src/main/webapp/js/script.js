@@ -64,18 +64,15 @@ function get_depth2_3_ids() {
 					compare.push(data[i].parent_cd);
 					lv3 = 1;
 				}
-				context += "<li><a href="
-				if(data[i].grandparent_cd == 'DE_002') context += "sample/" + data[i].dept_tag;
-				else context += "#" + data[i].dept_tag ;
-				  
-				if(data[i].grandparent_cd == 'DE_003'){
-					if(lv2.includes(data[i].dept_name)){
-						context += "><p style='color: #078FDC;'>" + data[i].dept_name + "</p></a></li>";	
-					}
-					else
-						context += "><p>" + data[i].dept_name + "</p></a></li>";		
-				}
-				else{context += "><p>" + data[i].dept_name + "</p></a></li>";}
+				/*context += "<li>";
+*/				if((data[i].grandparent_cd == 'DE_003') && (lv2.includes(data[i].dept_name)))
+					context += "<a class=title style='color: #078FDC; font-size: 12px;pointer-events: none;'>" + data[i].dept_name + "</a></li>";
+				else{
+					context += "<li><a href=";
+					if(data[i].grandparent_cd == 'DE_002') context += "sample/" + data[i].dept_tag;
+					else context += "#" + data[i].dept_tag ;
+					context += "><p>" + data[i].dept_name + "</p></a></li>";	
+				}	
 			}
 			context += "</ul>";
 			console.log(compare);

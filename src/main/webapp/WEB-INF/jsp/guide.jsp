@@ -215,7 +215,8 @@
 		<div class="textBox">
 		<ul class="listStyle-01 row">
 			<pre>
-		<code class="language-js ">var mapTarget = document.getElementById('map');
+		<code class="language-js ">
+var mapTarget = document.getElementById('map');
 var map = new ol.Map({
 		target : mapTarget,
 		layers : [ new ol.layer.Tile({
@@ -245,7 +246,8 @@ var map = new ol.Map({
 			</br>
 			<li>전체 코드는 아래와 같습니다.</li>
 			<pre>
-			<code class="language-html">&lt;!DOCTYPE html&gt;
+			<code class="language-html">
+&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
 		&lt;meta charset="utf-8"/&gt;

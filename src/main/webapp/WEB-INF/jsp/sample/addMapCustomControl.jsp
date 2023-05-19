@@ -72,7 +72,7 @@
 <body>
 	<h1>지도에 사용자 컨트롤 올리기</h1>
 	<ul class="listStyle-01 row">
-		<li style="margin-top: 12px; margin-bottom: 12px;">기본으로 제공하는 지도타입 컨트롤과 줌 컨트롤을 원하는 스타일로 직접 만들 수 있습니다. 컨트롤의 색이나 크기 등을 변경해야 할때 유용하겠지요. 아래 예제의 Javascript+HTML 코드를 참고해보세요.</li>
+		<li class="textContent">기본으로 제공하는 지도타입 컨트롤과 줌 컨트롤을 원하는 스타일로 직접 만들 수 있습니다. 컨트롤의 색이나 크기 등을 변경해야 할때 유용하겠지요. 아래 예제의 Javascript+HTML 코드를 참고해보세요.</li>
 	</ul>
 	<div id="map1" style="width: 100%; height: 330px;"></div>
 	</br>
@@ -124,7 +124,7 @@
         </ul>
 		<div id="jsCode" class="tabbody">
 		<figure class="highlight">
-			<pre><code class="language-js" style="margin-top: 0;"data-lang="js">
+			<pre><code class="language-js" style="margin-top: 0;margin-bottom:30px;"data-lang="js">
 // divId로 전달된 요소에 지도를 생성하는 함수
 var createMap = function(divId) {
 
@@ -169,7 +169,7 @@ var map2 = createMap('map2');
 	</div>
 	<div id="htmlCode" class="tabbody" style="display: none;">
 	<figure class="highlight">
-		<pre><code class="language-html"style="margin-top: 0;" data-lang="html">
+		<pre><code class="language-html"style="margin-top: 0;margin-bottom:30px;" data-lang="html">
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;

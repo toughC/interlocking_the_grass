@@ -15,7 +15,7 @@
 <body>
 	<h1>지도 이동시키기</h1>
 	<ul class="listStyle-01 row">
-		<li style="margin-top: 12px; margin-bottom: 12px;">지도를 이동시킵니다. 지도
+		<li class="textContent">지도를 이동시킵니다. 지도
 			객체의 메소드를 통해 지도를 원하는 좌표로 이동시킬 수 있습니다. 또, 지도가 표시되고 있는 영역크기를 벗어나지 않는
 			거리라면 애니메이션 효과처럼 지도를 부드럽게 이동시킬 수도 있습니다.</li>
 	</ul>
@@ -81,7 +81,7 @@
         </ul>
 		<div id="jsCode" class="tabbody">
 			<figure class="highlight">
-<pre><code class="language-js"style="margin-top: 0;" data-lang="js">
+<pre><code class="language-js" style="margin-top: 0;margin-bottom:30px;" data-lang="js">
 // 레이어를 포함한 지도 객체 생성
 var map = new ol.Map({
 		// 지도 레이어를 설정합니다.
@@ -134,7 +134,7 @@ document.getElementById('animateButton').addEventListener('click', animateMap);
 		</div>
 		<div id="htmlCode" class="tabbody" style="display: none;">
 		<figure class="highlight">
-			<pre><code class="language-html"style="margin-top: 0;"data-lang="html">
+			<pre><code class="language-html" style="margin-top: 0;margin-bottom:30px;" data-lang="html">
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;

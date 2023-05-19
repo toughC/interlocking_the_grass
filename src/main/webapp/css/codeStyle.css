@@ -85,3 +85,29 @@
   /* 라인 높이 */
   line-height: 15px;
 }
+
+.dark-mode {
+  /* Dark mode 스타일 조정 */
+  background-color: #212121;
+  color: #ffffff;
+}
+
+.dark-mode .code-button {
+  /* 버튼 스타일 조정 */
+  background-color: #78797a;
+  color: #ffffff;
+}
+
+.dark-mode .code-button.active {
+  /* 활성화된 버튼 스타일 조정 */
+  background-color: #f3f5f5;
+  color: #000000;
+  border-bottom: 1px solid transparent;
+}
+
+.dark-mode .code-button.inactive {
+  /* 비활성화된 버튼 스타일 조정 */
+  background-color: #e4e4e4;
+  color: #78797a;
+  border-bottom: none;
+}

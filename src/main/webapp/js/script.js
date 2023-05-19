@@ -124,18 +124,23 @@ function sampleBodyList() {
 }
 
 
-// darkMode 상태를 저장하는 함수
+//darkMode 상태를 저장하는 함수
 function saveDarkModeState() {
-	var isDarkModeOn = $('body').hasClass('darkMode');
-	localStorage.setItem('darkModeState', isDarkModeOn);
+  var isDarkModeOn = $('body').hasClass('darkMode');
+  localStorage.setItem('darkModeState', isDarkModeOn);
 }
 // darkMode 상태를 로드하는 함수
 function loadDarkModeState() {
-	var isDarkModeOn = localStorage.getItem('darkModeState') === 'true';
-	$('body').toggleClass('darkMode', isDarkModeOn);
+  var isDarkModeOn = localStorage.getItem('darkModeState') === 'true';
+  $('body').toggleClass('darkMode', isDarkModeOn);
 }
 $('.ModeBtn').click(function() {
-	$('body').toggleClass('darkMode');
-	var isDarkMode = $('body').hasClass('darkMode');
-	setDarkModeStatus(isDarkMode);
+  $('body').toggleClass('darkMode');
+  var isDarkMode = $('body').hasClass('darkMode');
+  setDarkModeStatus(isDarkMode);
+
+  // Dark mode가 아닌 경우에 실행할 코드 작성
+  if (!isDarkMode) {
+    console.log("Running in non-dark mode");
+  }
 });

@@ -16,7 +16,7 @@
 <body>
 	<h1>지도에 컨트롤 올리기</h1>
 	<ul class="listStyle-01 row">
-		<li style="margin-top: 12px; margin-bottom: 12px;">일반 지도와 스카이뷰로
+		<li class="textContent">일반 지도와 스카이뷰로
 			지도 타입을 전환할 수 있는 버튼과 지도 확대, 축소를 제어할 수 있는 도구를 쉽게 지도 위에 올릴 수 있습니다. 각각 지도
 			타입 컨트롤, 지도 줌 컨트롤이라고 부르며, 아래 예제와 같이 지도 위에 표시될 위치를 지정할 수도 있습니다.</li>
 	</ul>
@@ -66,7 +66,7 @@
         </ul>
 		<div id="jsCode" class="tabbody">
 			<figure class="highlight">
-				<pre><code class="language-js" style="margin-top: 0;"data-lang="js">
+				<pre><code class="language-js" style="margin-top: 0;margin-bottom:30px;"data-lang="js">
 // divId로 전달된 요소에 지도를 생성하는 함수
 var createMap = function(divId) {
 
@@ -108,7 +108,7 @@ var map = createMap('map');
 	</div>
 	<div id="htmlCode" class="tabbody" style="display: none;">
 	<figure class="highlight">
-		<pre><code class="language-html"style="margin-top: 0;" data-lang="html">
+		<pre><code class="language-html"style="margin-top: 0;margin-bottom:30px;" data-lang="html">
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;

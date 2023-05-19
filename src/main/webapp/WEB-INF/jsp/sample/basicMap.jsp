@@ -14,7 +14,7 @@
 <body>
 	<h1>지도 생성하기</h1>
 	<ul class="listStyle-01 row">
-		<li style="margin-top: 12px; margin-bottom: 12px;">지도를 생성하는 가장
+		<li class="textContent">지도를 생성하는 가장
 		기본적인 예제입니다.</li>
 	</ul>
 	<div id="map" style="width: 100%; height: 330px; position: relative; overflow: hidden; background: url("https://t1.daumcdn.net/mapjsapi/images/2x/bg_tile.png");"></div>
@@ -49,7 +49,7 @@
         </ul>
 		<div id="jsCode" class="tabbody">
 			<figure class="highlight">
-<pre><code class="language-js" style="margin-top: 0;" data-lang="js">
+<pre><code class="language-js" style="margin-top: 0;margin-bottom:30px;" data-lang="js">
 // 레이어를 포함한 지도 객체 생성 
 var map = new ol.Map({
 		// 지도 레이어를 설정합니다.
@@ -76,7 +76,7 @@ var map = new ol.Map({
 		</div>
 		<div id="htmlCode" class="tabbody">
 			<figure class="highlight">
-				<pre><code class="language-html" style="margin-top: 0;" data-lang="html">
+				<pre><code class="language-html" style="margin-top: 0;margin-bottom:30px;" data-lang="html">
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;

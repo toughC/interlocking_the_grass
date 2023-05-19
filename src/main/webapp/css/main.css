@@ -94,7 +94,6 @@ body{height: 100vh;overflow:hidden}
 .map-container>li .DE_063{background-image: url('../images/map-sample/063-map.png');}
 .map-container>li .DE_064{background-image: url('../images/map-sample/064-map.png');}
 .map-container>li .DE_065{background-image: url('../images/map-sample/065-map.png');}
-
 /* --------------------------------------------------------------codBox----------------------------------------------------------------------- */
 .section .codeBox{width: 100%; background: #232323; border: solid 3px #858585; border-radius: 4px;}
 .section .codeBox .textArea{margin: 10px 20px;    /* 임시폰트값 */font: 600 30px 'pretendard'; color: #989898; opacity: 0.5;}
@@ -121,15 +120,18 @@ body.darkMode .listGroup ul li a:before{border-color: #fff !important;}
 
 /* .content */
 body.darkMode #content{background: #1c1c1c !important;}
-body.darkMode code{background: #414141 !important; font-weight: 300 !important; border-color: #717171 !important;}
+body.darkMode code{background: #414141 !important; font-weight: 300 !important; border-color: #717171;}
 body.darkMode h1{color: #e4e4e4 !important;}
 body.darkMode h2{color: #e4e4e4 !important;}
 body.darkMode .section{color: #d3d3d3 !important; font-weight: 300 !important;}
-body.darkMode .textBox{border-color: #d3d3d3 !important;}
+body.darkMode .textBox{border-color: #d3d3d3 !important; margin-bottom:5px;}
 body.darkMode .imgBox{background: #232323 !important; border-color: #515151 !important;}
 body.darkMode .imgBox>img{border-color: #424242 !important;}
 body.darkMode .map-container li{color: #d3d3d3 !important; font-weight: 300 !important;}
 body.darkMode .map-container li a{border-color: #515151 !important;}
+body.darkMode .container .listStyle-01 .textContent{color: #fff !important;margin-top: 12px;margin-bottom: 12px;}
+body.darkMode .container .textContent2{color: #fff !important;margin-top: 12px;margin-bottom: 12px;}
+
 body.darkMode .codeBox{border-color: #515151 !important;}
 body.darkMode .move .up{background: #3A3A3A url(../images/dark-up.png) no-repeat center !important;}
 body.darkMode .move .up:hover{background-color: #797979 !important;}
@@ -142,7 +144,7 @@ body.darkMode ::-webkit-scrollbar-thumb:hover {background-color: #cfcfcf !import
 body.darkMode ::-webkit-scrollbar-track {background-color: #414141 !important;}
 
 /* wrab-tab */
-body.darkMode .wrap_tab ul li{background-color: #242424 !important; border-color: #717171 !important; color: #818181 !important;}
+body.darkMode .wrap_tab ul li{background-color: #242424 ; border-color: #717171; color: #818181;}
 body.darkMode .wrap_tab ul .on{background-color: #414141 !important; border-bottom-color: #414141 !important; color: #d3d3d3 !important;}
 
 
@@ -187,9 +189,10 @@ body.darkMode .wrap_tab ul .on{background-color: #414141 !important; border-bott
     #sideMenu .listGroup:last-child{padding-bottom: 30px;}
 
     #content .container{margin-top: 59px;}
-	#content .container code {padding: 2px 5px;margin: 10px 0;border-radius: 0 2px 2px 2px;font-size: 11px;}
+	#content .container code {padding: 2px 5px;margin-top: 10px; margin-bottom:30px;border-radius: 0 2px 2px 2px;font-size: 11px;}
     #content .container h1{font-size: 19px; border-bottom: 1px solid #ccc;padding-top:18px; padding-bottom: 18px; /* 아래쪽으로 5px의 padding 추가 */}
-    #content .container h2{font-size: 19px; padding-top:15px;}
+    #content .container h2{font-size: 19px; margin-top:15px;}
+    
     #content .container .section{padding-top: 0px; font-size: 11px;}
     #content .container .section:last-child{padding-bottom: 0px;}
     #content .container .row{margin-top: 15px;}
@@ -197,7 +200,9 @@ body.darkMode .wrap_tab ul .on{background-color: #414141 !important; border-bott
     #content .container .listStyle-01{margin-left: 6px;}
     #content .container .listStyle-02{margin-left: 25px;}
     #content .container .listStyle-03{margin-left: 50px;}
-    #content .container .textBox{margin-top: 13px;border-radius: 4px;}
+   	#content .container .listStyle-01 .textContent{color: #000;margin-top: 12px;margin-bottom: 12px;}
+    #content .container .textContent2{color: #000 ;margin-top: 12px;margin-bottom: 12px;}
+    #content .container .textBox{margin-top: 13px;margin-bottom:30px;border-radius: 4px;}
     #content .container .textBox>ul{margin: 14px 23px;}
     #content .container .imgBox{margin-top: 6px; border-radius: 4px;}
     #content .container .imgBox>img{margin: 6px 19px; max-width: 85%;max-height: 230px;}
@@ -206,7 +211,7 @@ body.darkMode .wrap_tab ul .on{background-color: #414141 !important; border-bott
     #content .move .up{width:25px;height:25px;background-size: 50% !important; background-position: center 8px !important;}
     #content .move .down{margin-top:5px;width:25px;height:25px;background-size: 50% !important; background-position: center 9px !important;}
     
-    .map-container{margin-top:41px;padding-bottom:31px;}
+    .map-container{margin-top:12px;padding-bottom:31px;}
     .map-container>li{margin-top:22px;font-size: 11px;}
     .map-container>li a{margin:0 auto 9px;width:178px;height:136px;border-radius: 3px; background-size: 100%;}
     .map-container>li a:before{border-radius: 3px;}
@@ -265,7 +270,7 @@ body.darkMode .wrap_tab ul .on{background-color: #414141 !important; border-bott
     #content .container code{font-size:13px;padding: 2px 5px;border-radius: 0 3px 3px 3px;}
     #content .container h1{font-size: 18px;}     
     #content .container h2{font-size: 20px;} 
-    #content .container .section{padding-top: 30px; font-size: 14px;}
+    #content .container .section{padding-top: 0px; font-size: 14px;}
     #content .container .section:last-child{padding-bottom: 20px;}    
     #content .container .row{margin-top: 14px;}     
     #content .container .info{margin-top: 18px;}   
@@ -281,7 +286,7 @@ body.darkMode .wrap_tab ul .on{background-color: #414141 !important; border-bott
     #content .move .down{display: none}        
 
     /* map-container */
-    .map-container{margin-top:-20px; min-width: 326px;}
+    .map-container{margin-top:15px; min-width: 326px;}
     .map-container>li{margin:20px 4px 0;font-size: 14px; padding: 0 !important;}
     .map-container>li a{margin:0 auto 10px; width:150px;height:110px;}
 

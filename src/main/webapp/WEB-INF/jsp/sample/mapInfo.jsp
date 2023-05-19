@@ -47,8 +47,8 @@
 <body>
 	<h1>지도 정보 얻어오기</h1>
 	<ul class="listStyle-01 row">
-		<li style="margin-top: 12px; margin-bottom: 12px;">지도 레벨, 중심좌표, 지도 타입, 지도 영역정보를 얻어와 표출합니다.</li>
-		<li style="margin-top: 12px; margin-bottom: 12px;"><a href="" target="_blank">지도 타입을 보시려면 여기를 클릭하세요!</a></li>
+		<li class="textContent">지도 레벨, 중심좌표, 지도 타입, 지도 영역정보를 얻어와 표출합니다.</li>
+		<a href="" target="_blank"><li class="textContent">지도 타입을 보시려면 여기를 클릭하세요!</li></a>
 	</ul>
 	<div id="map" style="width: 100%; height: 330px; position: relative; overflow: hidden; background: url('https://t1.daumcdn.net/mapjsapi/images/2x/bg_tile.png');"></div>
 	
@@ -124,7 +124,7 @@
         </ul>
 		<div id="jsCode" class="tabbody">
 			<figure class="highlight">
-				<pre><code class="language-js" style="margin-top: 0;" data-lang="js">
+				<pre><code class="language-js" style="margin-top: 0;margin-bottom:30px;" data-lang="js">
 // 지도를 표시할 div 요소를 가져옵니다.
 var mapContainer = document.getElementById('map');
 
@@ -165,7 +165,7 @@ var map = new ol.Map({
 		</div>
 		<div id="htmlCode" class="tabbody" style="display: none;">
 		<figure class="highlight">
-			<pre><code class="language-html" style="margin-top: 0;" zssz666data-lang="html">
+			<pre><code class="language-html" style="margin-top: 0;margin-bottom:30px;" zssz666data-lang="html">
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;

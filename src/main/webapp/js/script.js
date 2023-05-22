@@ -51,7 +51,7 @@ function get_depth2_3_ids() {
 		async : false,
 		success : function(data)
 		{	
-			var context = "", compare = [], lv2 =["Methods", "Test.Methods"];
+			var context = "", compare = [], lv2 =["Methods"];
 			console.log(data);
 
 			for (var i = 0; i < data.length; i++) 
@@ -64,14 +64,29 @@ function get_depth2_3_ids() {
 					compare.push(data[i].parent_cd);
 					lv3 = 1;
 				}
-				/*context += "<li>";
-*/				if((data[i].grandparent_cd == 'DE_003') && (lv2.includes(data[i].dept_name)))
+				
+				if((data[i].grandparent_cd == 'DE_003') && (lv2.includes(data[i].dept_name)))
 					context += "<a class=title style='color: #078FDC; font-size: 12px;pointer-events: none;'>" + data[i].dept_name + "</a></li>";
 				else{
 					context += "<li><a href=";
-					if(data[i].grandparent_cd == 'DE_002') context += "sample/" + data[i].dept_tag;
-					else context += "#" + data[i].dept_tag ;
-					context += "><p>" + data[i].dept_name + "</p></a></li>";	
+					if(data[i].grandparent_cd == 'DE_002'){
+						context += "sample/" + data[i].dept_tag;
+						var currentURL = window.location.href;
+						var sampleIndex = currentURL.indexOf("/sample/");
+						if (sampleIndex !== -1) {
+						  var currentPage = currentURL.substr(sampleIndex + "/sample/".length);
+						  
+						  // data 배열의 각 요소와 현재 페이지를 비교하여 class를 추가합니다.
+						  if (data[i].dept_tag === currentPage) {
+						    context += " class=active";
+						  }
+						}
+
+					}
+					else context += "#" + data[i].dept_tag;
+					
+					context += "><p>" + data[i].dept_name + "</p></a></li>";
+
 				}	
 			}
 			context += "</ul>";
@@ -122,6 +137,19 @@ function sampleBodyList() {
 		}
 	});
 }
+
+function handleMenuClick(event) {
+	  var clickedElement = event.target.closest("a");
+
+	  // Remove the "active" class from all <a> elements inside #menuLv2Lv3
+	  var menuElements = document.querySelectorAll("#menuLv2Lv3 a");
+	  menuElements.forEach(function (elem) {
+	    elem.classList.remove("active");
+	  });
+
+	  // Add the "active" class to the clicked <a> element
+	  clickedElement.classList.add("active");
+	}
 
 
 //darkMode 상태를 저장하는 함수

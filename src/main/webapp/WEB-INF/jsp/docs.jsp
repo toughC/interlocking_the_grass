@@ -21,14 +21,9 @@
 				<li><strong style="font-size: 13px; opacity: 0.6; display: inline;">Parameters</strong>:</br>• control (Type: module:ol/control/Control~Control): 추가할 컨트롤(Control)입니다. 이 매개변수는 Control 클래스의 인스턴스여야 합니다. OpenLayers에서 제공하는 기본 컨트롤 또는 사용자가 직접 작성한 컨트롤을 인스턴스화하여 전달할 수 있습니다.</li>
 				<li><strong style="font-size: 13px; opacity: 0.6; display: inline;">Returns</strong>:</br> • void: 컨트롤을 맵에 추가한 후 아무런 값을 반환하지 않습니다.</li>
 				<li><strong style="font-size: 13px; opacity: 0.6; display: inline;">Usage Example</strong>:</br>
-			<pre><code class="javascript">
-import { ScaleLine } from 'ol/control';
-
-// ScaleLine 컨트롤 생성
-const scaleLineControl = new ScaleLine();
-
-// 맵에 컨트롤 추가
-map.addControl(scaleLineControl);
+			<pre><code class="javascript">// 줌 슬라이더 컨트롤을 추가하고, 지도 객체에 추가
+zoomslider = new ol.control.ZoomSlider();
+map.addControl(zoomslider);
 </code></pre></li>
 			</ul>
 			</ul>
@@ -40,12 +35,9 @@ map.addControl(scaleLineControl);
 				<li><strong style="font-size: 13px; opacity: 0.6; display: inline;">Parameters</strong>:</br>• interaction (ol.interaction.Interaction): 추가할 상호작용 객체입니다. 이 매개변수는 "ol.interaction.Interaction" 클래스의 인스턴스여야 합니다. OpenLayers에서 제공하는 기본 상호작용 또는 사용자가 직접 작성한 상호작용을 인스턴스화하여 전달할 수 있습니다.</li>
 				<li><strong style="font-size: 13px; opacity: 0.6; display: inline;">Returns</strong>:</br> • void: 상호작용을 지도에 추가한 후, 반환 값이 없습니다.</li>
 				<li><strong style="font-size: 13px; opacity: 0.6; display: inline;">Usage Example</strong>:</br>
-			<pre><code class="javascript">
-var interaction = new ol.interaction.Select({
-  condition: ol.events.condition.click // 클릭 이벤트로 선택
-});
-
-map.addInteraction(interaction);
+			<pre><code class="javascript">// 줌 슬라이더 상호작용 생성
+var zoomSliderInteraction = new ol.interaction.ZoomSlider();
+map.addInteraction(zoomSliderInteraction);
 </code></pre></li>
 			</ul>
 			</ul>
@@ -57,13 +49,12 @@ map.addInteraction(interaction);
 				<li><strong style="font-size: 13px; opacity: 0.6; display: inline;">Parameters</strong>:</br>• layer (ol.layer.Layer): 추가할 레이어 객체입니다. 이 매개변수는 ol.layer.Layer 클래스의 인스턴스여야 합니다.</li>
 				<li><strong style="font-size: 13px; opacity: 0.6; display: inline;">Returns</strong>:</br> • void: 레이어를 지도에 추가한 후, 반환 값이 없습니다.</li>
 				<li><strong style="font-size: 13px; opacity: 0.6; display: inline;">Usage Example</strong>:</br>
-			<pre><code class="javascript">
-// 1. 레이어 객체 생성
+			<pre><code class="javascript">// 레이어 생성
 var layer = new ol.layer.Tile({
   source: new ol.source.OSM()
 });
 
-// 2. 레이어를 지도에 추가
+// 지도에 레이어 추가
 map.addLayer(layer);
 </code></pre></li>
 			</ul>
@@ -76,15 +67,13 @@ map.addLayer(layer);
 				<li><strong style="font-size: 13px; opacity: 0.6; display: inline;">Parameters</strong>:</br>• overlay (ol.Overlay): 추가할 오버레이 객체입니다. 이 매개변수는 "ol.Overlay" 클래스의 인스턴스여야 합니다. OpenLayers에서 제공하는 기본 오버레이 또는 사용자가 직접 작성한 오버레이를 인스턴스화하여 전달할 수 있습니다.</li>
 				<li><strong style="font-size: 13px; opacity: 0.6; display: inline;">Returns</strong>:</br> • void: 오버레이를 지도에 추가한 후, 반환 값이 없습니다.</li>
 				<li><strong style="font-size: 13px; opacity: 0.6; display: inline;">Usage Example</strong>:</br>
-			<pre><code class="javascript">
-var overlay = new ol.Overlay({
+			<pre><code class="javascript">var overlay = new ol.Overlay({
   element: document.getElementById('overlay'), // 오버레이로 사용할 HTML 요소
   position: ol.proj.fromLonLat([127.0, 37.0]), // 오버레이의 위치 설정
   positioning: 'center-center' // 오버레이의 위치 기준 설정
 });
 
 map.addOverlay(overlay);
-
 </code></pre></li>
 			</ul>
 			</ul>

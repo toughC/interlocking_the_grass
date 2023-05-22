@@ -38,6 +38,7 @@ body{height: 100vh;overflow:hidden}
 #sideMenu .listGroup .line{margin-top: -5px; padding-top: 10px; border-top: solid 1px #aaaaaa;}
 #sideMenu .listGroup ul li a{padding: 5px 0; position: relative; display: block; font: 400 16px/24px 'pretendard'; color: #888888;}
 #sideMenu .listGroup ul li a:hover{font: 800 16px/24px 'pretendard'; color: #0E2436;}
+#sideMenu .listGroup ul li a.active{color: #0E2436; text-decoration: underline;font-weight: bold;}
 #sideMenu .listGroup ul li a:before{display: none; content: ''; position: absolute; left: 28px; top: 0px; height: 100%; width: 3px; border-left: 3px solid #0E2436;}
 #sideMenu .listGroup ul li a:hover:before{display: block;}
 #sideMenu .listGroup ul li a p{padding: 0 28px 0 44px;}
@@ -116,6 +117,7 @@ body.darkMode input{background: none !important; color: #d3d3d3 !important;}
 body.darkMode #sideMenu{background: #323232 !important;}
 body.darkMode .listGroup .title{color: #d3d3d3 !important;}
 body.darkMode .listGroup ul li a:hover{color: #fff !important;}
+body.darkMode .listGroup ul li a.active{color: #fff !important; text-decoration: underline;font-weight: bold;}
 body.darkMode .listGroup ul li a:before{border-color: #fff !important;}
 
 /* .content */
@@ -165,7 +167,7 @@ body.darkMode .wrap_tab ul .on{background-color: #414141 !important; border-bott
 
 /* --------------------------------------------------------------max-width:1280px----------------------------------------------------------------------- */
 
-@media (max-width:1280px) {
+@media (max-width:1920px) {
     #header {width:96px;}
     #sideMenu {left: 96px; width: 209px;}
     #content {left: 305px; width:calc(100% - 305px);}
@@ -205,7 +207,7 @@ body.darkMode .wrap_tab ul .on{background-color: #414141 !important; border-bott
     #content .container .textBox{margin-top: 13px;margin-bottom:30px;border-radius: 4px;}
     #content .container .textBox>ul{margin: 14px 23px;}
     #content .container .imgBox{margin-top: 6px; border-radius: 4px;}
-    #content .container .imgBox>img{margin: 6px 19px; max-width: 85%;max-height: 230px;}
+    #content .container .imgBox>img{margin: 6px 19px; max-width: 100%;max-height: 230px;}
     #content .container .tip{margin-top: 6px;}
     #content .container .tip li{font-size: 10px;}
     #content .move .up{width:25px;height:25px;background-size: 50% !important; background-position: center 8px !important;}
@@ -301,6 +303,8 @@ body.darkMode .wrap_tab ul .on{background-color: #414141 !important; border-bott
     body.menuOn #sideMenu button{display: block !important;}
     body.menuOn #sideMenu input{display: block !important;}
     body.menuOn #content{display: none !important;}
+    
+
 
     /* darkMode */
     body.darkMode #header .logo{background-color: #000 !important;}

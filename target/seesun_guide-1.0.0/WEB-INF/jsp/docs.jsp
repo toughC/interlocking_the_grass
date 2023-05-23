@@ -9,134 +9,82 @@
 <c:import url="/WEB-INF/jsp/inc/header.jsp"></c:import>
 <c:import url="/WEB-INF/jsp/inc/body.jsp"></c:import>
 
-<h1>ol.CanvasMap</h1>
+<h1 id="Map" style='margin-bottom:7px;'>ol.CanvasMap</h1>
+<li class="textContent2">• OpenLayers 라이브러리 버전 5.3.0의 PluggableMap 클래스는 OpenLayers 맵의 핵심 클래스이며, 맵의 생성, 조작, 레이어 관리 등 다양한 기능을 제공합니다.</li>
 <div class="section">
-	<!-- 			<div class="codeBox"> -->
-	<!-- 				<p class="textArea"> -->
-	<pre>
-					    <!-- code 태그에 class에 표시할 언어를 설정한다. -->
-					    <!-- code 태그 안에 소스 코드를 입력합니다만, 스페이스와 탭 영역을 주의해서 입력한다. -->
-					    <code class="javascript">function test() {
-    let map = new ol.Map();
-
-    let option = new Option();
-
-    alert("점심 뭐먹지 ?");
-}
-					</code>
-					  </pre>
-	<!-- 				</p> -->
-	<!-- 			</div> -->
-
-	<p class="codeBox-top">The map is the core component of OpenLayers.
-		For a map to render, a view, one or more layers, and a target
-		container are needed:</p>
-	<!-- 			<div class="codeBox"> -->
-	<!-- 				<p class="textArea"> -->
-	<!-- 					CODE BOX<br>CODE BOX<br>CODE BOX<br>CODE BOX<br>CODE -->
-	<!-- 					BOX<br>CODE BOX<br>CODE BOX<br>CODE BOX<br>CODE -->
-	<!-- 					BOX<br>CODE BOX -->
-	<!-- 				</p> -->
-	<!-- 			</div> -->
-	<p class="codeBox-bottom">
-		The above snippet creates a map using a <a href="" class="hyperlink">ol.layer.Tile</a>
-		to display <a href="" class="hyperlink">ol.source.OSM</a> OSM data and
-		render it to a DOM element with the id map.
-	</p>
-
-	<pre>
-					<code class="javascript">const map = new ol.Map({
-    layers: [
-        new ol.layer.Tile.TileLayer({
-            source: new ol.source.OSM(),
-        }),
-    ],
-    target: 'map',
-    view: new ol.View({
-        center: [0, 0],
-        zoom: 2,
-    }),
+	<h3 style='color: #078FDC;font-size: 15px;padding-top:23px;'>Methods</h3>
+	
+	<h2 id="Map_addControl">addControl<span style="font-size: 14px; display: inline; font-weight: lighter;">(control)</span></h2>
+		<ul class="listStyle-01 row">
+		<li>OpenLayers에서 Control은 지도 영역 내의 지도를 확대, 축소, 이동과 같은 조작 행위를 하기 위해 사용되는 객체입니다.</li></br>
+			<ul style="padding-left:10px;">
+				<li><strong style="font-size: 13px; opacity: 0.6; display: inline;">Parameters</strong>:</br>• control (Type: module:ol/control/Control~Control): 추가할 컨트롤(Control)입니다. 이 매개변수는 Control 클래스의 인스턴스여야 합니다. OpenLayers에서 제공하는 기본 컨트롤 또는 사용자가 직접 작성한 컨트롤을 인스턴스화하여 전달할 수 있습니다.</li>
+				<li><strong style="font-size: 13px; opacity: 0.6; display: inline;">Returns</strong>:</br> • void: 컨트롤을 맵에 추가한 후 아무런 값을 반환하지 않습니다.</li>
+				<li><strong style="font-size: 13px; opacity: 0.6; display: inline;">Usage Example</strong>:</br>
+			<pre><code class="javascript">// 줌 슬라이더 컨트롤을 추가하고, 지도 객체에 추가
+zoomslider = new ol.control.ZoomSlider();
+map.addControl(zoomslider);
+</code></pre></li>
+			</ul>
+			</ul>
+			
+	<h2 id="Map_addInteraction">addInteraction<span style="font-size: 14px; display: inline; font-weight: lighter;">(interaction)</span></h2>
+		<ul class="listStyle-01 row">
+		<li>OpenLayers에서 사용되는 메서드로, 지도에 상호작용을 추가합니다. 이를 통해 사용자는 지도 영역 내에서 확대, 축소, 이동 등의 조작을 수행할 수 있습니다.</li></br>
+		<ul style="padding-left:10px;">
+				<li><strong style="font-size: 13px; opacity: 0.6; display: inline;">Parameters</strong>:</br>• interaction (ol.interaction.Interaction): 추가할 상호작용 객체입니다. 이 매개변수는 "ol.interaction.Interaction" 클래스의 인스턴스여야 합니다. OpenLayers에서 제공하는 기본 상호작용 또는 사용자가 직접 작성한 상호작용을 인스턴스화하여 전달할 수 있습니다.</li>
+				<li><strong style="font-size: 13px; opacity: 0.6; display: inline;">Returns</strong>:</br> • void: 상호작용을 지도에 추가한 후, 반환 값이 없습니다.</li>
+				<li><strong style="font-size: 13px; opacity: 0.6; display: inline;">Usage Example</strong>:</br>
+			<pre><code class="javascript">// 줌 슬라이더 상호작용 생성
+var zoomSliderInteraction = new ol.interaction.ZoomSlider();
+map.addInteraction(zoomSliderInteraction);
+</code></pre></li>
+			</ul>
+			</ul>
+			
+			<h2 id="Map_addLayer">addLayer<span style="font-size: 14px; display: inline; font-weight: lighter;">(layer)</span></h2>
+		<ul class="listStyle-01 row">
+		<li>OpenLayers에서 사용되는 메서드로, 지도에 레이어를 추가하는 역할을 합니다. 해당 메서드는 ol.PluggableMap 클래스에 속해 있습니다.</li></br>
+		<ul style="padding-left:10px;">
+				<li><strong style="font-size: 13px; opacity: 0.6; display: inline;">Parameters</strong>:</br>• layer (ol.layer.Layer): 추가할 레이어 객체입니다. 이 매개변수는 ol.layer.Layer 클래스의 인스턴스여야 합니다.</li>
+				<li><strong style="font-size: 13px; opacity: 0.6; display: inline;">Returns</strong>:</br> • void: 레이어를 지도에 추가한 후, 반환 값이 없습니다.</li>
+				<li><strong style="font-size: 13px; opacity: 0.6; display: inline;">Usage Example</strong>:</br>
+			<pre><code class="javascript">// 레이어 생성
+var layer = new ol.layer.Tile({
+  source: new ol.source.OSM()
 });
-					</code>
-				</pre>
+
+// 지도에 레이어 추가
+map.addLayer(layer);
+</code></pre></li>
+			</ul>
+			</ul>
+			
+			<h2 id="Map_addOverlay">addOverlay<span style="font-size: 14px; display: inline; font-weight: lighter;">(overlay)</span></h2>
+		<ul class="listStyle-01 row">
+		<li>OpenLayers에서 사용되는 메서드로, 지도에 오버레이(overlay)를 추가합니다. 오버레이는 지도 위에 다양한 그래픽 요소를 표시하는 역할을 합니다.</li></br>
+		<ul style="padding-left:10px;">
+				<li><strong style="font-size: 13px; opacity: 0.6; display: inline;">Parameters</strong>:</br>• overlay (ol.Overlay): 추가할 오버레이 객체입니다. 이 매개변수는 "ol.Overlay" 클래스의 인스턴스여야 합니다. OpenLayers에서 제공하는 기본 오버레이 또는 사용자가 직접 작성한 오버레이를 인스턴스화하여 전달할 수 있습니다.</li>
+				<li><strong style="font-size: 13px; opacity: 0.6; display: inline;">Returns</strong>:</br> • void: 오버레이를 지도에 추가한 후, 반환 값이 없습니다.</li>
+				<li><strong style="font-size: 13px; opacity: 0.6; display: inline;">Usage Example</strong>:</br>
+			<pre><code class="javascript">var overlay = new ol.Overlay({
+  element: document.getElementById('overlay'), // 오버레이로 사용할 HTML 요소
+  position: ol.proj.fromLonLat([127.0, 37.0]), // 오버레이의 위치 설정
+  positioning: 'center-center' // 오버레이의 위치 기준 설정
+});
+
+map.addOverlay(overlay);
+</code></pre></li>
+			</ul>
+			</ul>
+
+</div>
+</div>
 </div>
 
+</div>
+</div>
+</div>
 
-
-<!-- function home() {
-		$.ajax({
-			url : "home.do",
-			type : "post",
-			data : {
-				lv1 :encodeURIComponent('DE_003'),
-				keyword : $('#search-input').val()
-			},
-			dataType : "json",
-			async : true,
-			success : function(data)
-			{	
-				var html = ""; // 출력할 내용을 저장할 문자열 변수
-				var compare = ""; // 이전에 출력한 부서 이름을 저장할 변수
-				var compare2 = "";
-				var count = 0;
-
-				for (var i = 0; i < data.length; i++) {	
-
-				  if (data[i].depth == 3 || data[i].depth == 4) {
-				    var parentName = data[i].parent_name;
-				    var grandparentName = data[i].grandparent_name;
-				    var deptName = data[i].dept_name;
-				    var childName = data[i].child_name;
-
-				    // 부서 이름이 이전에 출력한 이름과 같지 않으면
-				    if (parentName != compare || grandparentName != compare2) {
-				      // 부서 이름과 하위 부서 목록을 문자열로 만들어서 html 변수에 추가
-				      if (data[i].depth == 3) {
-				        html += "<a class='title' href='#'>" + parentName + " 1 </a><ul>";
-				        html += "<a class='subTitle line'>" + deptName + " 1 </a><ul>";
-				      } else {
-				        html += "<a class='title' href='#'>" + grandparentName + " 2 </a><ul>";
-				        html += "<a class='subTitle line'>" + parentName + " 2 </a><ul>";
-				      }
-
-				      compare = parentName; // 출력한 부서 이름을 저장
-				      compare2 = grandparentName;
-				    }
-
-				    // 부서 정보를 문자열로 만들어서 html 변수에 추가
-				    if (data[i].depth == 3) {
-				      html += "<li><a href='#'><p>" + childName + " 3 </p></a></li>";
-				    } else {
-				      html += "<li><a href='#'><p>" + deptName + " 3 </p></a></li>";
-				    }
-				  }
-				}
-
-				// html 변수에 저장된 문자열을 HTML 코드로 변환해서 출력
-				$('#menuLv2Lv3').html(html);
-				
-				
-	/* 			var context = "", compare = "";
-				//console.log(data);
-			
-				for (var i = 0; i < data.length; i++) {
-					  if (data[i].depth == 3) {
-						  if (compare != data[i].parent_name) 
-						  {
-						        context += "<a class=title href=> " + data[i].parent_name + "</a><ul>";
-						        compare = data[i].parent_name;
-						  }
-						  context += "<li><a href=><p>" + data[i].dept_name + "</p></a></li>";			    
-					  }
-				}
-					
-				context += "</ul>";
-				
-				$('#menuLv2Lv3').html(context);		 */
-			},
-	
-			error : (e) => console.log(e)
-		}); 		
-	} -->
-
+</body>
 </html>

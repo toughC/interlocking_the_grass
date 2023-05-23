@@ -8,11 +8,12 @@ input[type='password'] {}
 input[type='number'] {}
 .textBox, .imgBox, .codeBox, img{box-sizing: border-box;}
 
-/* 2023-05-10 권순영 수정 */
-.zoomBtn{width: 75px; height: 28px; margin: 7px 3px 7px 0; font-size: 14px; border: 1px solid #BFBFBF;background: #f0f0f0;}
-.zoomBtn:hover{background: #d6d6d6;}
-.zoomBtn:active{background: #c3c3c3; transform: translateY(2px);}
-body.darkMode .zoomBtn{background-color: #414141;border-color: #717171; color: #d3d3d3;}
-body.darkMode .zoomBtn:hover{background-color: #2c2c2c;}
-body.darkMode .zoomBtn:active{background-color: #1c1c1c;}
-
+.zoomBtn {width: auto;padding: 0 10px; /* 버튼의 양 옆에 10px의 공백 추가 */height: 28px;margin: 7px 3px 7px 0;font-size: 14px;border: 1px solid #BFBFBF;background: #f0f0f0;transition: width 0.3s ease; /* 가로 크기 변화에 대한 애니메이션 효과 추가 */}
+.zoomBtn:hover {background: #d6d6d6;}
+.zoomBtn:active {background: #c3c3c3;transform: translateY(2px);}
+body.darkMode .zoomBtn {background-color: #414141;border-color: #717171;color: #d3d3d3;}
+body.darkMode .zoomBtn:hover {background-color: #2c2c2c;}
+body.darkMode .zoomBtn:active {background-color: #1c1c1c;}
+body.darkMode .zoomBtn {background-color: #414141;border-color: #717171;color: #d3d3d3;}
+body.darkMode .zoomBtn:hover {background-color: #2c2c2c;}
+body.darkMode .zoomBtn:active {background-color: #1c1c1c;}

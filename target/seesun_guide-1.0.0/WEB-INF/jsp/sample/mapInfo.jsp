@@ -47,12 +47,12 @@
 <body>
 	<h1>지도 정보 얻어오기</h1>
 	<ul class="listStyle-01 row">
-		<li style="margin-top: 12px; margin-bottom: 12px;">지도 레벨, 중심좌표, 지도 타입, 지도 영역정보를 얻어와 표출합니다.</li>
-		<li style="margin-top: 12px; margin-bottom: 12px;"><a href="" target="_blank">지도 타입을 보시려면 여기를 클릭하세요!</a></li>
+		<li class="textContent">지도 레벨, 중심좌표, 지도 타입, 지도 영역정보를 얻어와 표출합니다.</li>
+		<a href="" target="_blank"><li class="textContent">지도 타입을 보시려면 여기를 클릭하세요!</li></a>
 	</ul>
-	<div id="map" style="width: 100%; height: 350px; position: relative; overflow: hidden; background: url('https://t1.daumcdn.net/mapjsapi/images/2x/bg_tile.png');"></div>
+	<div id="map" style="width: 100%; height: 330px; position: relative; overflow: hidden; background: url('https://t1.daumcdn.net/mapjsapi/images/2x/bg_tile.png');"></div>
 	
-	<div style="border: 2px solid black; padding: 5px; max-width: 300px;">
+	<div style="border: 2px solid black; padding: 5px; max-width: 200px;">
   		<div style="display: flex; justify-content: center;">
 		    <button id="normalButton" class="mapButton active" value="normal">지도</button>
 		    <button id="skyviewButton" class="mapButton" value="skyview">스카이뷰</button>
@@ -124,7 +124,8 @@
         </ul>
 		<div id="jsCode" class="tabbody">
 			<figure class="highlight">
-				<pre><code class="language-js" data-lang="js">// 지도를 표시할 div 요소를 가져옵니다.
+				<pre><code class="language-js" style="margin-top: 0;margin-bottom:30px;" data-lang="js">
+// 지도를 표시할 div 요소를 가져옵니다.
 var mapContainer = document.getElementById('map');
 
 // OpenLayers를 사용하여 지도를 생성합니다.
@@ -157,12 +158,15 @@ var map = new ol.Map({
 				// 지도의 초기 확대/축소 레벨을 설정합니다.
 				zoom : 17,
 		})
-});</code></pre>
+});
+
+</code></pre>
 			</figure>
 		</div>
 		<div id="htmlCode" class="tabbody" style="display: none;">
 		<figure class="highlight">
-			<pre><code class="language-html" data-lang="html">&lt;!DOCTYPE html&gt;
+			<pre><code class="language-html" style="margin-top: 0;margin-bottom:30px;" zssz666data-lang="html">
+&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
 		&lt;meta charset="utf-8"/&gt;
@@ -170,7 +174,7 @@ var map = new ol.Map({
 		
 &lt;/head&gt;
 &lt;body&gt;
-&lt;div id="map" style="width: 100%; height: 350px;"&gt;&lt;/div&gt;
+&lt;div id="map" style="width: 100%; height: 330px;"&gt;&lt;/div&gt;
 
 &lt;div style="border: 2px solid black; padding: 5px; max-width: 300px;"&gt;
   		&lt;div style="display: flex; justify-content: center;"&gt;
@@ -237,7 +241,9 @@ var map = new ol.Map({
 		});
 &lt;/script&gt;
 &lt;/body&gt;
-&lt;/html&gt;</code></pre>
+&lt;/html&gt;
+
+</code></pre>
 			</figure>
 		</div>
 	</div>

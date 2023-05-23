@@ -11,6 +11,7 @@ body{height: 100vh;overflow:hidden}
 #sideMenu {position: fixed; top: 0; left: 154px; width: 335px; height: 100%; background: #f0f0f0;}
 #content {position: absolute; top: 0; left: 489px; width:calc(100% - 489px); min-width: 400px; height: 100%;overflow-y: auto; overflow-x: hidden;}
 
+
 /* scrollbar */
 ::-webkit-scrollbar {width: 8px; }
 ::-webkit-scrollbar-thumb {background-color: #d1d1d1; border-radius: 5px;}
@@ -37,6 +38,7 @@ body{height: 100vh;overflow:hidden}
 #sideMenu .listGroup .line{margin-top: -5px; padding-top: 10px; border-top: solid 1px #aaaaaa;}
 #sideMenu .listGroup ul li a{padding: 5px 0; position: relative; display: block; font: 400 16px/24px 'pretendard'; color: #888888;}
 #sideMenu .listGroup ul li a:hover{font: 800 16px/24px 'pretendard'; color: #0E2436;}
+#sideMenu .listGroup ul li a.active{color: #0E2436; text-decoration: underline;font-weight: bold;}
 #sideMenu .listGroup ul li a:before{display: none; content: ''; position: absolute; left: 28px; top: 0px; height: 100%; width: 3px; border-left: 3px solid #0E2436;}
 #sideMenu .listGroup ul li a:hover:before{display: block;}
 #sideMenu .listGroup ul li a p{padding: 0 28px 0 44px;}
@@ -49,8 +51,8 @@ body{height: 100vh;overflow:hidden}
 #content .container h1{font: 500 30px 'pretendard'; color: #0b0b0b;}
 #content .container h2{font: 800 30px 'poppins'; color: #0e2436;}
 #content .container li{line-height: 200%;}
-#content .container .section{padding-top: 56px; font: 400 18px 'pretendard'; color: #0b0b0b;}
-#content .container .section:last-child{padding-bottom: 56px;}
+#content .container .section{padding-top: 0px; font: 400 18px 'pretendard'; color: #0b0b0b;}
+#content .container .section:last-child{padding-bottom: 0px;}
 #content .container .row{margin-top: 24px;}
 #content .container .info{margin-top: 30px;}
 #content .container .info p{line-height: 130%; text-indent: -10px; padding-left: 10px;}
@@ -61,11 +63,11 @@ body{height: 100vh;overflow:hidden}
 #content .container .textBox>ul{margin: 22px 36px;}
 #content .container .imgContain{text-indent: 0;}
 #content .container .imgBox{width: 100%; margin-top: 10px; border: solid 2px #d9d9d9; border-radius: 5px; background: #f9f9f9; text-align: center;}
-#content .container .imgBox>img{margin: 25px 30px; border: solid 1px #d9d9d9; max-width: 100%;}
+#content .container .imgBox>img{margin: 6px 19px; max-width: 85%;max-height: 50px;border: solid 1px #d9d9d9;}
 #content .container .tip{margin-top: 10px;}
 #content .container .tip li{line-height: 170% !important; font: 400 16px 'pretendard'; color: #7a7a7a;}
 #content .container .hyperlink{color: #078FDC;}
-/* 2023-05-10 권순영 수정 */
+
 #content .container .wrap_tab ul {display: flex;margin-bottom:-1px;}
 #content .container .wrap_tab ul li{margin-right:-1px;padding:0 12px;background:#e4e4e4;font:400 14px/34px 'NanumGothic';border:1px solid #ddd; color: #949494; cursor:pointer;}
 #content .container .wrap_tab ul .on{background: #f3f5f5; font-weight: 500;color: #0b0b0b; border-bottom-color: #f3f5f5;}
@@ -75,6 +77,7 @@ body{height: 100vh;overflow:hidden}
 #content .move .up:hover{background-color: #667A8A; cursor: pointer;}
 #content .move .down{margin-top:8px;width:40px;height:40px;border-radius:50px;box-shadow:0px 4px 6px rgb(0 0 0 / 10%);background:#C3C8CD url(../images/down.png) no-repeat center 15px;}
 #content .move .down:hover{background-color: #667A8A; cursor: pointer;}
+.wrap_tab {margin-top: 25px;}
 
 
 /* --------------------------------------------------------------map-container----------------------------------------------------------------------- */
@@ -82,9 +85,9 @@ body{height: 100vh;overflow:hidden}
 .map-container>li{margin-top:36px;line-height: 100% !important; font:500 18px 'pretendard';color:#0b0b0b; text-indent: 0 !important;}
 .map-container>li a{display: block; position:relative;margin:0 auto 14px;width:275px;height:210px;background-position:center;background-size:contain;background-repeat:no-repeat;border:solid 1px #cacaca;border-radius:4px;cursor:pointer;}
 .map-container>li a:before{display:none;content:'';width:100%;height:100%;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(6px);filter:brightness(0.3);border-radius:4px}
-.map-container>li a:hover:before{display: block;}
-.map-container>li a p{display:none;position:absolute;left:50%; top:50%; transform: translate(-50%, -50%); font: 500 18px 'pretendard'; color:#fff;}
-.map-container>li a:hover p{display: block;}
+.map-container>li a:hover:before{display: block; }
+.map-container>li a p{margin-bottom:20px !important;display:none;position:absolute;left:50%; top:50%; transform: translate(-50%, -50%); font: 500 22px 'pretendard'; color:#fff;  width: 140px;}
+.map-container>li a:hover p{display: block;    max-height: 100px; /* 스크롤바 높이 조절 */overflow-y: auto;}
 
 .map-container>li .DE_060{background-image: url('../images/map-sample/060-map.png');}
 .map-container>li .DE_061{background-image: url('../images/map-sample/061-map.png');}
@@ -92,15 +95,11 @@ body{height: 100vh;overflow:hidden}
 .map-container>li .DE_063{background-image: url('../images/map-sample/063-map.png');}
 .map-container>li .DE_064{background-image: url('../images/map-sample/064-map.png');}
 .map-container>li .DE_065{background-image: url('../images/map-sample/065-map.png');}
-
 /* --------------------------------------------------------------codBox----------------------------------------------------------------------- */
 .section .codeBox{width: 100%; background: #232323; border: solid 3px #858585; border-radius: 4px;}
 .section .codeBox .textArea{margin: 10px 20px;    /* 임시폰트값 */font: 600 30px 'pretendard'; color: #989898; opacity: 0.5;}
 .section .codeBox-top{margin: 40px 0 20px;}
 .section .codeBox-bottom{margin: 20px 0 20px;}
-
-
-
 
 /* $('body').removeClass('darkMode') */
 /* --------------------------------------------------------------darkMode----------------------------------------------------------------------- */
@@ -118,19 +117,23 @@ body.darkMode input{background: none !important; color: #d3d3d3 !important;}
 body.darkMode #sideMenu{background: #323232 !important;}
 body.darkMode .listGroup .title{color: #d3d3d3 !important;}
 body.darkMode .listGroup ul li a:hover{color: #fff !important;}
+body.darkMode .listGroup ul li a.active{color: #fff !important; text-decoration: underline;font-weight: bold;}
 body.darkMode .listGroup ul li a:before{border-color: #fff !important;}
 
 /* .content */
 body.darkMode #content{background: #1c1c1c !important;}
-body.darkMode code{background: #414141 !important; font-weight: 300 !important; border-color: #717171 !important;}
+body.darkMode code{background: #414141 !important; font-weight: 300 !important; border-color: #717171;}
 body.darkMode h1{color: #e4e4e4 !important;}
 body.darkMode h2{color: #e4e4e4 !important;}
 body.darkMode .section{color: #d3d3d3 !important; font-weight: 300 !important;}
-body.darkMode .textBox{border-color: #d3d3d3 !important;}
+body.darkMode .textBox{border-color: #d3d3d3 !important; margin-bottom:5px;}
 body.darkMode .imgBox{background: #232323 !important; border-color: #515151 !important;}
 body.darkMode .imgBox>img{border-color: #424242 !important;}
 body.darkMode .map-container li{color: #d3d3d3 !important; font-weight: 300 !important;}
 body.darkMode .map-container li a{border-color: #515151 !important;}
+body.darkMode .container .listStyle-01 .textContent{color: #fff !important;margin-top: 12px;margin-bottom: 12px;}
+body.darkMode .container .textContent2{color: #fff !important;margin-top: 12px;margin-bottom: 12px;}
+
 body.darkMode .codeBox{border-color: #515151 !important;}
 body.darkMode .move .up{background: #3A3A3A url(../images/dark-up.png) no-repeat center !important;}
 body.darkMode .move .up:hover{background-color: #797979 !important;}
@@ -143,7 +146,7 @@ body.darkMode ::-webkit-scrollbar-thumb:hover {background-color: #cfcfcf !import
 body.darkMode ::-webkit-scrollbar-track {background-color: #414141 !important;}
 
 /* wrab-tab */
-body.darkMode .wrap_tab ul li{background-color: #242424 !important; border-color: #717171 !important; color: #818181 !important;}
+body.darkMode .wrap_tab ul li{background-color: #242424 ; border-color: #717171; color: #818181;}
 body.darkMode .wrap_tab ul .on{background-color: #414141 !important; border-bottom-color: #414141 !important; color: #d3d3d3 !important;}
 
 
@@ -161,9 +164,10 @@ body.darkMode .wrap_tab ul .on{background-color: #414141 !important; border-bott
 
 
 
+
 /* --------------------------------------------------------------max-width:1280px----------------------------------------------------------------------- */
 
-@media (max-width:1280px) {
+@media (max-width:1920px) {
     #header {width:96px;}
     #sideMenu {left: 96px; width: 209px;}
     #content {left: 305px; width:calc(100% - 305px);}
@@ -180,33 +184,36 @@ body.darkMode .wrap_tab ul .on{background-color: #414141 !important; border-bott
     #sideMenu .listGroup .title{text-indent: 18px; margin: 13px 0 6px; font-size: 13px;}
     #sideMenu .listGroup .subTitle{margin: 0 17px 0; font-size: 11px; line-height: 22px;}
     #sideMenu .listGroup .line{margin-top: -3px; padding-top: 6px;}
-    #sideMenu .listGroup ul li a{padding: 3px 0; font-size: 10px; line-height: 15px;}
+    #sideMenu .listGroup ul li a{padding: 2px 0; font-size: 10px; line-height: 15px;}
     #sideMenu .listGroup ul li a:hover{font-size: 10px; line-height: 15px;}
     #sideMenu .listGroup ul li a:before{left: 18px; height: 100%; width: 2px; border-width: 2px;}
     #sideMenu .listGroup ul li a p{padding: 0 18px 0 28px;}
     #sideMenu .listGroup:last-child{padding-bottom: 30px;}
 
     #content .container{margin-top: 59px;}
-    #content .container code{padding: 2px 5px; border-radius: 0 2px 2px 2px; font-size:11px;}
-    #content .container h1{font-size: 19px; border-bottom: 1px solid #ccc; padding-bottom: 18px; /* 아래쪽으로 5px의 padding 추가 */}
-    #content .container h2{font-size: 19px; }
-    #content .container .section{padding-top: 35px; font-size: 11px;}
-    #content .container .section:last-child{padding-bottom: 35px;}
+	#content .container code {padding: 2px 5px;margin-top: 10px; margin-bottom:30px;border-radius: 0 2px 2px 2px;font-size: 11px;}
+    #content .container h1{font-size: 19px; border-bottom: 1px solid #ccc;padding-top:18px; padding-bottom: 18px; /* 아래쪽으로 5px의 padding 추가 */}
+    #content .container h2{font-size: 19px; margin-top:15px;}
+    
+    #content .container .section{padding-top: 0px; font-size: 11px;}
+    #content .container .section:last-child{padding-bottom: 0px;}
     #content .container .row{margin-top: 15px;}
     #content .container .info{margin-top: 19px;}
     #content .container .listStyle-01{margin-left: 6px;}
     #content .container .listStyle-02{margin-left: 25px;}
     #content .container .listStyle-03{margin-left: 50px;}
-    #content .container .textBox{margin-top: 13px;border-radius: 4px;}
+   	#content .container .listStyle-01 .textContent{color: #000;margin-top: 12px;margin-bottom: 12px;}
+    #content .container .textContent2{color: #000 ;margin-top: 12px;margin-bottom: 12px;}
+    #content .container .textBox{margin-top: 13px;margin-bottom:30px;border-radius: 4px;}
     #content .container .textBox>ul{margin: 14px 23px;}
     #content .container .imgBox{margin-top: 6px; border-radius: 4px;}
-    #content .container .imgBox>img{margin: 16px 19px; max-width: 85%;}
+    #content .container .imgBox>img{margin: 6px 19px; max-width: 100%;max-height: 230px;}
     #content .container .tip{margin-top: 6px;}
     #content .container .tip li{font-size: 10px;}
     #content .move .up{width:25px;height:25px;background-size: 50% !important; background-position: center 8px !important;}
     #content .move .down{margin-top:5px;width:25px;height:25px;background-size: 50% !important; background-position: center 9px !important;}
     
-    .map-container{margin-top:41px;padding-bottom:31px;}
+    .map-container{margin-top:12px;padding-bottom:31px;}
     .map-container>li{margin-top:22px;font-size: 11px;}
     .map-container>li a{margin:0 auto 9px;width:178px;height:136px;border-radius: 3px; background-size: 100%;}
     .map-container>li a:before{border-radius: 3px;}
@@ -253,7 +260,7 @@ body.darkMode .wrap_tab ul .on{background-color: #414141 !important; border-bott
     #sideMenu .listGroup .title{margin: 0; padding: 8px 0; font-size: 15px; line-height: 24px; text-indent: 26px;}
     #sideMenu .listGroup .subTitle{margin: 0 30px 0; font-size: 15px; line-height: 40px;}
     #sideMenu .listGroup .line{margin: 0 0 0 30px; padding-top: 4px; border-top: solid 1px #aaaaaa;}
-    #sideMenu .listGroup ul li a{padding: 8px 0; font-size: 14px; line-height: 24px;}
+    #sideMenu .listGroup ul li a{padding:  0; font-size: 14px; line-height: 24px;}
     #sideMenu .listGroup ul li a:hover{font-size: 14px; line-height: 24px;}
     #sideMenu .listGroup ul li a:before{display: none; content: ''; position: absolute; left: 28px; height: 100%; width: 3px; border-left: 3px solid #0E2436;}
     #sideMenu .listGroup ul li a:hover:before{display: block;}
@@ -265,7 +272,7 @@ body.darkMode .wrap_tab ul .on{background-color: #414141 !important; border-bott
     #content .container code{font-size:13px;padding: 2px 5px;border-radius: 0 3px 3px 3px;}
     #content .container h1{font-size: 18px;}     
     #content .container h2{font-size: 20px;} 
-    #content .container .section{padding-top: 30px; font-size: 14px;}
+    #content .container .section{padding-top: 0px; font-size: 14px;}
     #content .container .section:last-child{padding-bottom: 20px;}    
     #content .container .row{margin-top: 14px;}     
     #content .container .info{margin-top: 18px;}   
@@ -274,14 +281,14 @@ body.darkMode .wrap_tab ul .on{background-color: #414141 !important; border-bott
     #content .container .mbImgBox{margin: 0;}
     #content .container .mbImgBox li{padding: 0; text-indent: 0;}
     #content .container .imgBox{margin-top: 8px; border:none; background: none;}
-    #content .container .imgBox>img{margin: 0; max-width: 100%;}
+    #content .container .imgBox>img{margin: 3px 0px; max-width: 100%;}
     #content .container .tip{margin-top: 6px;}
     #content .container .tip li{font-size: 13px;}
     #content .move .up{display: none}           
     #content .move .down{display: none}        
 
     /* map-container */
-    .map-container{margin-top:-20px; min-width: 326px;}
+    .map-container{margin-top:15px; min-width: 326px;}
     .map-container>li{margin:20px 4px 0;font-size: 14px; padding: 0 !important;}
     .map-container>li a{margin:0 auto 10px; width:150px;height:110px;}
 
@@ -296,6 +303,8 @@ body.darkMode .wrap_tab ul .on{background-color: #414141 !important; border-bott
     body.menuOn #sideMenu button{display: block !important;}
     body.menuOn #sideMenu input{display: block !important;}
     body.menuOn #content{display: none !important;}
+    
+
 
     /* darkMode */
     body.darkMode #header .logo{background-color: #000 !important;}

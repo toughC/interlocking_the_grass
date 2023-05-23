@@ -24,9 +24,8 @@
 <link rel="stylesheet" href="../css/codeStyle.css">
 <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-	<script
+<script
 	src="https://cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
-	
 
 <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="http://code.jquery.com/jquery-latest.js"></script>
@@ -34,22 +33,10 @@
 <script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
 <script src="../js/script.js"></script>
 
-<link rel="stylesheet" href="https://openlayers.org/en/v4.6.5/css/ol.css" type="text/css">
+<link rel="stylesheet"
+	href="https://openlayers.org/en/v4.6.5/css/ol.css" type="text/css">
 <!-- The line below is only needed for old environments like Internet Explorer and Android 4.x -->
-<script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
+<script
+	src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
 <script src="https://openlayers.org/en/v4.6.5/build/ol.js"></script>
-
-<script> function toggleCodeDisplay(codeType) {
-	var jsCode = document.getElementById('jsCode');
-	var htmlCode = document.getElementById('htmlCode');
-
-	if (codeType === 'jsCode') {
-		jsCode.style.display = 'block';
-		htmlCode.style.display = 'none';
-	} else if (codeType === 'htmlCode') {
-		jsCode.style.display = 'none';
-		htmlCode.style.display = 'block';
-	}
-}
-</script>
 </head>

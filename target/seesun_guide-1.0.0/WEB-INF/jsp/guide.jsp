@@ -5,9 +5,7 @@
 
 <!DOCTYPE html>
 <html lang="ko">
-<script>
-	var pageId = 'DE_001', pageName = 'guide'
-</script>
+<script>var pageId = 'DE_001', pageName = 'guide'</script>
 <c:import url="/WEB-INF/jsp/inc/header.jsp"></c:import>
 <c:import url="/WEB-INF/jsp/inc/body.jsp"></c:import>
 
@@ -195,6 +193,8 @@
 
 	<div class="section">
 		<h2 id="step1">지도를 그리는 Javascript API 추가</h2>
+		
+		<div class="textBox">
 		<ul class="listStyle-01 row">
 			<pre>
 		<code class="language-html">&lt;script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v5.3.0/build/ol.js"&gt;&lt;/script&gt;</code>
@@ -208,12 +208,15 @@
 			<li>하지만, <strong>반드시 실행 코드보다 먼저 선언되어야 합니다.</strong></li>
 		</ul>
 	</div>
+	</div>
 
 	<div class="section">
 		<h2 id="step2">지도를 띄우는 코드 작성</h2>
+		<div class="textBox">
 		<ul class="listStyle-01 row">
 			<pre>
-		<code class="language-js" data-lang="js">var mapTarget = document.getElementById('map');
+		<code class="language-js ">
+var mapTarget = document.getElementById('map');
 var map = new ol.Map({
 		target : mapTarget,
 		layers : [ new ol.layer.Tile({
@@ -243,7 +246,8 @@ var map = new ol.Map({
 			</br>
 			<li>전체 코드는 아래와 같습니다.</li>
 			<pre>
-			<code class="language-html">&lt;!DOCTYPE html&gt;
+			<code class="language-html">
+&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
 		&lt;meta charset="utf-8"/&gt;
@@ -300,6 +304,7 @@ var map = new ol.Map({
 			</div>
 
 		</ul>
+	</div>
 	</div>
 
 </div>

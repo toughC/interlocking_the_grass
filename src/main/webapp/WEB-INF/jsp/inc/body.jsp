@@ -21,7 +21,7 @@
 			<ul id="get_depth1_id" class="gnb"></ul>
 
 			<!-- dark mode -->
-			<div class="ModeBtn" onclick="$('body').toggleClass('darkMode'), saveDarkModeState()"></div>
+			<div class="ModeBtn" onclick="$('body').toggleClass('darkMode'), saveDarkModeState(), toggleCodeDisplay('jsCode',null)"></div>
 		</div>
 
 		<!-- sideMenu -->

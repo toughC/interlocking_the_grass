@@ -172,3 +172,63 @@ $('.ModeBtn').click(function() {
     console.log("Running in non-dark mode");
   }
 });
+
+function toggleCodeDisplay(codeType, button) {
+	var jsCode = document.getElementById('jsCode');
+	var htmlCode = document.getElementById('htmlCode');
+	var jsCodeBtn = document.querySelector('.code-01');
+	var htmlCodeBtn = document.querySelector('.code-02');
+	
+	if(jsCode !== null){
+		if(localStorage.getItem('darkModeState') === 'true'){
+			if (codeType === 'jsCode') {
+				jsCode.style.display = 'block';
+				htmlCode.style.display = 'none';
+				jsCodeBtn.style.backgroundColor = '#414141';
+				jsCodeBtn.style.color = '#fff';
+				jsCodeBtn.style.borderBottom = '1px solid transparent';
+				htmlCodeBtn.style.backgroundColor = '#000';
+				htmlCodeBtn.style.color = '#d3d3d3';
+				htmlCodeBtn.style.borderBottom = 'none';
+				
+			} else if (codeType === 'htmlCode') {
+				jsCode.style.display = 'none';
+				htmlCode.style.display = 'block';
+				jsCodeBtn.style.backgroundColor = '#000';
+				jsCodeBtn.style.color = '#d3d3d3';
+				jsCodeBtn.style.borderBottom = 'none';
+				htmlCodeBtn.style.backgroundColor = '#414141';
+				htmlCodeBtn.style.color = '#fff';
+				htmlCodeBtn.style.borderBottom = '1px solid transparent';
+			}
+		}
+		else{
+			if (codeType === 'jsCode') {
+				jsCode.style.display = 'block';
+				htmlCode.style.display = 'none';
+				jsCodeBtn.style.backgroundColor = '#f3f5f5';
+				jsCodeBtn.style.color = '#000';
+				jsCodeBtn.style.borderBottom = '1px solid transparent';
+				htmlCodeBtn.style.backgroundColor = '#e4e4e4';
+				htmlCodeBtn.style.color = '#78797a';
+				htmlCodeBtn.style.borderBottom = 'none';
+				
+			} else if (codeType === 'htmlCode') {
+				jsCode.style.display = 'none';
+				htmlCode.style.display = 'block';
+				jsCodeBtn.style.backgroundColor = '#e4e4e4';
+				jsCodeBtn.style.color = '#78797a';
+				jsCodeBtn.style.borderBottom = 'none';
+				htmlCodeBtn.style.backgroundColor = '#f3f5f5';
+				htmlCodeBtn.style.color = '#000';
+				htmlCodeBtn.style.borderBottom = '1px solid transparent';
+			}
+		}
+	}
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+	// 초기 상태로 'jsCode'를 선택하도록 설정
+	toggleCodeDisplay('jsCode', document.querySelector('.code-01'));
+
+});

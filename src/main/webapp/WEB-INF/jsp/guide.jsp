@@ -5,7 +5,9 @@
 
 <!DOCTYPE html>
 <html lang="ko">
-<script>var pageId = 'DE_001', pageName = 'guide'</script>
+<script>
+	var pageId = 'DE_001', pageName = 'guide'
+</script>
 <c:import url="/WEB-INF/jsp/inc/header.jsp"></c:import>
 <c:import url="/WEB-INF/jsp/inc/body.jsp"></c:import>
 
@@ -21,6 +23,7 @@
 	</ul>
 	<div class="info">
 		<p>설치하려면 아래 과정이 필요합니다.</p>
+		<p style="text-align: right;">[작성일: 2023-05-11]</p>
 		<div class="textBox">
 			<ul>
 				<li>1. <a class="underover"
@@ -51,19 +54,11 @@
 				<li>7. 마지막으로 cmd창(윈도우키 + R)을 열고 콘솔창에 <code>java -version</code>을
 					입력하고, 버전을 확인하면 됩니다.
 				</li>
-				<!-- <li class="listStyle-03">• 등록한 도메인(ex :
-					http://localhost:8080)에서 서버를 실행시켜 위 파일을 엽니다.
-					<ul class="tip">
-						<li># Python이 설치된 컴퓨터에는 해당 폴더로 이동 후</li>
-						<li>$ cd/path/to/your/folder/</li>
-						<li># 다음과 같이 테스트용 웹 서버를 실행할 수 있습니다.</li>
-					</ul>
-				</li> -->
 			</ul>
 		</div>
 	</div>
-
 </div>
+
 <div class="section">
 	<h2 id="settomact">Tomcat</h2>
 	<ul class="listStyle-01 row">
@@ -73,10 +68,10 @@
 		<li>• <ins>Tomcat v9.0</ins> 윈도우 버전과 eGovFramework를 연결하기 위해
 			Tomcat 설치방법에 대해 소개하겠습니다.
 		</li>
-		</li>
 	</ul>
 	<div class="info">
 		<p>설치하려면 아래 과정이 필요합니다.</p>
+		<p style="text-align: right;">[작성일: 2023-05-11]</p>
 		<div class="textBox">
 			<ul>
 				<li>1. <a class="underover"
@@ -103,8 +98,8 @@
 			</ul>
 		</div>
 	</div>
-
 </div>
+
 <div class="section">
 	<h2 id="setegov">eGovFrame</h2>
 	<ul class="listStyle-01 row">
@@ -118,6 +113,7 @@
 	</ul>
 	<div class="info">
 		<p>설치하고 Tomcat과 연동하려면 아래 과정이 필요합니다.</p>
+		<p style="text-align: right;">[작성일: 2023-05-11]</p>
 		<div class="textBox">
 			<ul>
 				<li>1. <a class="underover"
@@ -169,6 +165,7 @@
 	</ul>
 	<div class="info">
 		<p>설치하려면 아래 과정이 필요합니다.</p>
+		<p style="text-align: right;">[작성일: 2023-05-11]</p>
 		<div class="textBox">
 			<ul>
 				<li>1. <a class="underover"
@@ -193,28 +190,29 @@
 
 	<div class="section">
 		<h2 id="step1">지도를 그리는 Javascript API 추가</h2>
-		
+		<p style="text-align: right;">[작성일: 2023-05-11]</p>
 		<div class="textBox">
-		<ul class="listStyle-01 row">
-			<pre>
+			<ul class="listStyle-01 row">
+				<pre>
 		<code class="language-html">&lt;script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v5.3.0/build/ol.js"&gt;&lt;/script&gt;</code>
 		</pre>
-			<li><code>//</code>이라는 상대 프로토콜을 사용하면, 사용자의 <code>http</code>,<code>https</code>환경에
-				따라 자동으로 해당 프로토콜을 따라가게 됩니다.</li>
-			</br>
-			<li>API를 로딩하는 스크립트 태그는 HTML파일안의<code>head</code>,<code>body</code>등
-				어떠한 위치에 넣어도 상관없습니다.
-			</li>
-			<li>하지만, <strong>반드시 실행 코드보다 먼저 선언되어야 합니다.</strong></li>
-		</ul>
-	</div>
+				<li><code>//</code>이라는 상대 프로토콜을 사용하면, 사용자의 <code>http</code>,<code>https</code>환경에
+					따라 자동으로 해당 프로토콜을 따라가게 됩니다.</li>
+				</br>
+				<li>API를 로딩하는 스크립트 태그는 HTML파일안의<code>head</code>,<code>body</code>등
+					어떠한 위치에 넣어도 상관없습니다.
+				</li>
+				<li>하지만, <strong>반드시 실행 코드보다 먼저 선언되어야 합니다.</strong></li>
+			</ul>
+		</div>
 	</div>
 
 	<div class="section">
 		<h2 id="step2">지도를 띄우는 코드 작성</h2>
+		<p style="text-align: right;">[작성일: 2023-05-11]</p>
 		<div class="textBox">
-		<ul class="listStyle-01 row">
-			<pre>
+			<ul class="listStyle-01 row">
+				<pre>
 		<code class="language-js ">
 var mapTarget = document.getElementById('map');
 var map = new ol.Map({
@@ -231,21 +229,21 @@ var map = new ol.Map({
 		})
 });</code>
 		</pre>
-			<li>OpenLayers를 사용하여 지도 객체를 생성할 때는 <code>Map()</code> 함수를 사용하고,
-				이 함수의 두 번째 파라미터로 <code>options</code> 객체를 전달합니다.
-			</li>
-			<li>이 <code>options</code> 객체에서 <code>center</code> 속성은 <strong>지도를
-					생성할 때 반드시 필요한 속성</strong>으로, <code>LatLng</code> 클래스를 사용하여 <code>위도(latitude)와
-					경도(longitude)</code> 값을 순서대로 전달하여 생성합니다.
-			</li>
-			<li>이렇게 생성된 <code>LatLng</code> 객체는 지도의 초기 중심 좌표로 설정됩니다.
-			</li>
-			<li>예를 들어, 서울의 경우 <code>LatLng(37.5667, 126.9784)</code> 와 같이
-				생성할 수 있습니다.
-			</li>
-			</br>
-			<li>전체 코드는 아래와 같습니다.</li>
-			<pre>
+				<li>OpenLayers를 사용하여 지도 객체를 생성할 때는 <code>Map()</code> 함수를 사용하고,
+					이 함수의 두 번째 파라미터로 <code>options</code> 객체를 전달합니다.
+				</li>
+				<li>이 <code>options</code> 객체에서 <code>center</code> 속성은 <strong>지도를
+						생성할 때 반드시 필요한 속성</strong>으로, <code>LatLng</code> 클래스를 사용하여 <code>위도(latitude)와
+						경도(longitude)</code> 값을 순서대로 전달하여 생성합니다.
+				</li>
+				<li>이렇게 생성된 <code>LatLng</code> 객체는 지도의 초기 중심 좌표로 설정됩니다.
+				</li>
+				<li>예를 들어, 서울의 경우 <code>LatLng(37.5667, 126.9784)</code> 와 같이
+					생성할 수 있습니다.
+				</li>
+				</br>
+				<li>전체 코드는 아래와 같습니다.</li>
+				<pre>
 			<code class="language-html">
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -275,36 +273,36 @@ var map = new ol.Map({
 &lt;/body&gt;
 &lt;/html&gt;</code>
 		</pre>
-			<li>모두 되었습니다. 여러분의 웹브라우저에는 아래와 같이 <code>500x400</code> 크기의 지도가
-				생성되었을 겁니다.
-			</li>
-			<div>
-				<body>
-					<div id="map" style="width: 500px; height: 400px;"></div>
-					<script
-						src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v5.3.0/build/ol.js"></script>
-					<script>
-						var mapTarget = document.getElementById('map');
-						var map = new ol.Map({
-							target : mapTarget,
-							layers : [ new ol.layer.Tile({
-								source : new ol.source.OSM({
-									attributions : false
+				<li>모두 되었습니다. 여러분의 웹브라우저에는 아래와 같이 <code>500x400</code> 크기의 지도가
+					생성되었을 겁니다.
+				</li>
+				<div>
+					<body>
+						<div id="map" style="width: 500px; height: 400px;"></div>
+						<script
+							src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v5.3.0/build/ol.js"></script>
+						<script>
+							var mapTarget = document.getElementById('map');
+							var map = new ol.Map({
+								target : mapTarget,
+								layers : [ new ol.layer.Tile({
+									source : new ol.source.OSM({
+										attributions : false
+									})
+								}) ],
+
+								view : new ol.View({
+									center : ol.proj.fromLonLat([ 126.9784,
+											37.5667 ]),
+									zoom : 12
 								})
-							}) ],
+							});
+						</script>
+					</body>
+				</div>
 
-							view : new ol.View({
-								center : ol.proj
-										.fromLonLat([ 126.9784, 37.5667 ]),
-								zoom : 12
-							})
-						});
-					</script>
-				</body>
-			</div>
-
-		</ul>
-	</div>
+			</ul>
+		</div>
 	</div>
 
 </div>

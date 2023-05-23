@@ -12,73 +12,79 @@
 <c:import url="/WEB-INF/jsp/inc/body.jsp"></c:import>
 
 <script> var pageId = 'DE_002', pageName = 'sample' </script>
-  <head>
-   <style>
-      #map1 .ol-zoom .ol-zoom-out {
-        margin-top: 204px;
-      }
-      #map1 .ol-zoomslider {
-        background-color: transparent;
-        top: 2.3em;
-      }
+<head>
+<style>
+#map1 .ol-zoom .ol-zoom-out {
+	margin-top: 204px;
+}
 
-      #map1 .ol-touch .ol-zoom .ol-zoom-out {
-        margin-top: 212px;
-      }
-      #map1 .ol-touch .ol-zoomslider {
-        top: 2.75em;
-      }
+#map1 .ol-zoomslider {
+	background-color: transparent;
+	top: 2.3em;
+}
 
-      #map1 .ol-zoom-in.ol-has-tooltip:hover [role=tooltip],
-      #map1 .ol-zoom-in.ol-has-tooltip:focus [role=tooltip] {
-        top: 3px;
-      }
+#map1 .ol-touch .ol-zoom .ol-zoom-out {
+	margin-top: 212px;
+}
 
-      #map1 .ol-zoom-out.ol-has-tooltip:hover [role=tooltip],
-      #map1 .ol-zoom-out.ol-has-tooltip:focus [role=tooltip] {
-        top: 232px;
-      }
+#map1 .ol-touch .ol-zoomslider {
+	top: 2.75em;
+}
 
-      #map2 .ol-zoomslider {
-        top: 8px;
-        left: auto;
-        right: 8px;
-        background-color: rgba(255,69,0,0.2);
-        width: 200px;
-        height: 15px;
-        padding: 0;
-        box-shadow: 0 0 5px rgb(255,69,0);
-        border-radius: 20px;
-      }
+#map1 .ol-zoom-in.ol-has-tooltip:hover [role=tooltip], #map1 .ol-zoom-in.ol-has-tooltip:focus [role=tooltip]
+	{
+	top: 3px;
+}
 
-      #map2 .ol-zoomslider:hover {
-        background-color: rgba(255,69,0,0.3);
-      }
+#map1 .ol-zoom-out.ol-has-tooltip:hover [role=tooltip], #map1 .ol-zoom-out.ol-has-tooltip:focus [role=tooltip]
+	{
+	top: 232px;
+}
 
-      #map2 .ol-zoomslider-thumb {
-        height: 15px;
-        width: 15px;
-        margin: 0;
-        filter: none;
-        background-color: rgba(255,69,0,0.6);
-        border-radius: 20px;
-      }
-      #map2 a.ol-zoomslider-handle:hover {
-        background-color: rgba(255,69,0,0.7);
-      }
-    </style>
-  </head>
-  
+#map2 .ol-zoomslider {
+	top: 8px;
+	left: auto;
+	right: 8px;
+	background-color: rgba(255, 69, 0, 0.2);
+	width: 200px;
+	height: 15px;
+	padding: 0;
+	box-shadow: 0 0 5px rgb(255, 69, 0);
+	border-radius: 20px;
+}
+
+#map2 .ol-zoomslider:hover {
+	background-color: rgba(255, 69, 0, 0.3);
+}
+
+#map2 .ol-zoomslider-thumb {
+	height: 15px;
+	width: 15px;
+	margin: 0;
+	filter: none;
+	background-color: rgba(255, 69, 0, 0.6);
+	border-radius: 20px;
+}
+
+#map2 a.ol-zoomslider-handle:hover {
+	background-color: rgba(255, 69, 0, 0.7);
+}
+</style>
+</head>
+
 <body>
 	<h1>지도에 사용자 컨트롤 올리기</h1>
 	<ul class="listStyle-01 row">
-		<li class="textContent">기본으로 제공하는 지도타입 컨트롤과 줌 컨트롤을 원하는 스타일로 직접 만들 수 있습니다. 컨트롤의 색이나 크기 등을 변경해야 할때 유용하겠지요. 아래 예제의 Javascript+HTML 코드를 참고해보세요.</li>
+		<li class="textContent">기본으로 제공하는 지도타입 컨트롤과 줌 컨트롤을 원하는 스타일로 직접 만들
+			수 있습니다. 컨트롤의 색이나 크기 등을 변경해야 할때 유용하겠지요. 아래 예제의 Javascript+HTML 코드를
+			참고해보세요.</li>
 	</ul>
+	<p style="text-align: right;">[작성일: 2023-05-18]</p>
 	<div id="map1" style="width: 100%; height: 330px;"></div>
 	</br>
-    <div id="map2" style="width: 100%; height: 330px;"></div>
-    
-    <script>
+	<div id="map2" style="width: 100%; height: 330px;"></div>
+
+	<script>
 		// divId로 전달된 요소에 지도를 생성하는 함수
 		var createMap = function(divId) {
 			var source, layer, map, zoomslider;
@@ -116,15 +122,18 @@
 		// createMap 함수를 호출하여, id가 'map2'인 요소에 지도 생성
 		var map2 = createMap('map2');
     </script>
-    
+
 	<div class="wrap_tab">
-        <ul>
-            <li class="code-01" onclick="toggleCodeDisplay('jsCode')">Javascript</li>
-            <li class="code-02" onclick="toggleCodeDisplay('htmlCode')">Javascript + HTML</li>
-        </ul>
+		<ul>
+			<li class="code-01" onclick="toggleCodeDisplay('jsCode')">Javascript</li>
+			<li class="code-02" onclick="toggleCodeDisplay('htmlCode')">Javascript
+				+ HTML</li>
+		</ul>
 		<div id="jsCode" class="tabbody">
-		<figure class="highlight">
-			<pre><code class="language-js" style="margin-top: 0;margin-bottom:30px;"data-lang="js">
+			<figure class="highlight">
+				<pre>
+					<code class="language-js"
+						style="margin-top: 0; margin-bottom: 30px;" data-lang="js">
 // divId로 전달된 요소에 지도를 생성하는 함수
 var createMap = function(divId) {
 
@@ -164,12 +173,15 @@ var map1 = createMap('map1');
 // createMap 함수를 호출하여, id가 'map2'인 요소에 지도 생성
 var map2 = createMap('map2');
 
-</code></pre>
-		</figure>
-	</div>
-	<div id="htmlCode" class="tabbody" style="display: none;">
-	<figure class="highlight">
-		<pre><code class="language-html"style="margin-top: 0;margin-bottom:30px;" data-lang="html">
+</code>
+				</pre>
+			</figure>
+		</div>
+		<div id="htmlCode" class="tabbody" style="display: none;">
+			<figure class="highlight">
+				<pre>
+					<code class="language-html"
+						style="margin-top: 0; margin-bottom: 30px;" data-lang="html">
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -225,9 +237,10 @@ var map2 = createMap('map2');
 &lt;/body&gt;
 &lt;/html&gt;
 
-</code></pre>
+</code>
+				</pre>
 			</figure>
 		</div>
 	</div>
-  </body>
+</body>
 </html>

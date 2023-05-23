@@ -9,15 +9,18 @@
 <meta charset="UTF-8">
 <c:import url="/WEB-INF/jsp/inc/header.jsp"></c:import>
 <c:import url="/WEB-INF/jsp/inc/body.jsp"></c:import>
-<script>var pageId = 'DE_002', pageName = 'sample'</script>
+<script>
+	var pageId = 'DE_002', pageName = 'sample'
+</script>
 
 <body>
 	<h1>지도 생성하기</h1>
 	<ul class="listStyle-01 row">
-		<li class="textContent">지도를 생성하는 가장
-		기본적인 예제입니다.</li>
+		<li class="textContent">지도를 생성하는 가장 기본적인 예제입니다.</li>
 	</ul>
-	<div id="map" style="width: 100%; height: 330px; position: relative; overflow: hidden; background: url("https://t1.daumcdn.net/mapjsapi/images/2x/bg_tile.png");"></div>
+	<p style="text-align: right;">[작성일: 2023-05-18]</p>
+	<div id="map"
+		style="width: 100%; height: 330px; position: relative; overflow: hidden; background: url("https://t1.daumcdn.net/mapjsapi/images/2x/bg_tile.png");"></div>
 
 	<script type="text/javascript">
 		// 레이어를 포함한 지도 객체 생성
@@ -28,10 +31,10 @@
 					attributions : false
 				})
 			}) ],
-			
+
 			// 지도가 표시될 HTML 요소를 설정합니다.
 			target : 'map',
-			
+
 			// 지도의 뷰 설정을 구성합니다.
 			view : new ol.View({
 				// 지도의 중심 좌표를 설정합니다. (위도, 경도 순서로 입력)
@@ -41,15 +44,18 @@
 			})
 		});
 	</script>
-	
-	<div class="wrap_tab" >
-        <ul>
-            <li class="code-01" onclick="toggleCodeDisplay('jsCode')">Javascript</li>
-            <li class="code-02" onclick="toggleCodeDisplay('htmlCode')">Javascript + HTML</li>
-        </ul>
+
+	<div class="wrap_tab">
+		<ul>
+			<li class="code-01" onclick="toggleCodeDisplay('jsCode')">Javascript</li>
+			<li class="code-02" onclick="toggleCodeDisplay('htmlCode')">Javascript
+				+ HTML</li>
+		</ul>
 		<div id="jsCode" class="tabbody">
 			<figure class="highlight">
-<pre><code class="language-js" style="margin-top: 0;margin-bottom:30px;" data-lang="js">
+				<pre>
+					<code class="language-js"
+						style="margin-top: 0; margin-bottom: 30px;" data-lang="js">
 // 레이어를 포함한 지도 객체 생성 
 var map = new ol.Map({
 		// 지도 레이어를 설정합니다.
@@ -71,12 +77,15 @@ var map = new ol.Map({
 		})
 });
 
-</code></pre>
+</code>
+				</pre>
 			</figure>
 		</div>
 		<div id="htmlCode" class="tabbody">
 			<figure class="highlight">
-				<pre><code class="language-html" style="margin-top: 0;margin-bottom:30px;" data-lang="html">
+				<pre>
+					<code class="language-html"
+						style="margin-top: 0; margin-bottom: 30px;" data-lang="html">
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -111,7 +120,8 @@ var map = new ol.Map({
 &lt;/body&gt;
 &lt;/html&gt;
 
-</code></pre>
+</code>
+				</pre>
 			</figure>
 		</div>
 	</div>

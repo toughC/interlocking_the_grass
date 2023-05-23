@@ -5,78 +5,116 @@
 
 <!DOCTYPE html>
 <html lang="ko">
-<script>var pageId = 'DE_003'; pageName = 'docs';</script>
+<script>
+	var pageId = 'DE_003';
+	pageName = 'docs';
+</script>
 <c:import url="/WEB-INF/jsp/inc/header.jsp"></c:import>
 <c:import url="/WEB-INF/jsp/inc/body.jsp"></c:import>
 
-<h1 id="Map" style='margin-bottom:7px;'>ol.CanvasMap</h1>
-<li class="textContent2">• OpenLayers 라이브러리 버전 5.3.0의 PluggableMap 클래스는 OpenLayers 맵의 핵심 클래스이며, 맵의 생성, 조작, 레이어 관리 등 다양한 기능을 제공합니다.</li>
+<h1 id="Map" style='margin-bottom: 7px;'>ol.CanvasMap</h1>
+<li class="textContent2">• OpenLayers 3 라이브러리의 PluggableMap 클래스는
+	OpenLayers 맵의 핵심 클래스로, 맵의 생성, 조작, 레이어 관리 등 다양한 기능을 제공합니다.</li>
 <div class="section">
-	<h3 style='color: #078FDC;font-size: 15px;padding-top:23px;'>Methods</h3>
-	
-	<h2 id="Map_addControl">addControl<span style="font-size: 14px; display: inline; font-weight: lighter;">(control)</span></h2>
-		<ul class="listStyle-01 row">
-		<li>OpenLayers에서 Control은 지도 영역 내의 지도를 확대, 축소, 이동과 같은 조작 행위를 하기 위해 사용되는 객체입니다.</li></br>
-			<ul style="padding-left:10px;">
-				<li><strong style="font-size: 13px; opacity: 0.6; display: inline;">Parameters</strong>:</br>• control (Type: module:ol/control/Control~Control): 추가할 컨트롤(Control)입니다. 이 매개변수는 Control 클래스의 인스턴스여야 합니다. OpenLayers에서 제공하는 기본 컨트롤 또는 사용자가 직접 작성한 컨트롤을 인스턴스화하여 전달할 수 있습니다.</li>
-				<li><strong style="font-size: 13px; opacity: 0.6; display: inline;">Returns</strong>:</br> • void: 컨트롤을 맵에 추가한 후 아무런 값을 반환하지 않습니다.</li>
-				<li><strong style="font-size: 13px; opacity: 0.6; display: inline;">Usage Example</strong>:</br>
-			<pre><code class="javascript">// 줌 슬라이더 컨트롤을 추가하고, 지도 객체에 추가
-zoomslider = new ol.control.ZoomSlider();
+	<h3 style='color: #078FDC; font-size: 15px; padding-top: 23px;'>Methods</h3>
+
+	<h2 id="Map_addControl">
+		addControl<span
+			style="font-size: 14px; display: inline; font-weight: lighter;">(control)</span>
+	</h2>
+	<ul class="listStyle-01 row">
+		<li>지도에 컨트롤을 추가한다.</li>
+		</br>
+		<ul style="padding-left: 10px;">
+			<li><strong
+				style="font-size: 13px; opacity: 0.6; display: inline;">Explanation</strong>:</br>map.addControl(zoomslider);는
+				생성한 ZoomSlider 컨트롤을 맵에 추가하는 코드이다. </br>이렇게 추가된 컨트롤은 지도 위에 나타나고 사용자에게 확대 및
+				축소 기능을 제공한다.</li>
+			<p style="text-align: right;">[작성일: 2023-05-23]</p>
+			<pre>
+				<code class="javascript">zoomslider = new ol.control.ZoomSlider();
 map.addControl(zoomslider);
-</code></pre></li>
-			</ul>
-			</ul>
-			
-	<h2 id="Map_addInteraction">addInteraction<span style="font-size: 14px; display: inline; font-weight: lighter;">(interaction)</span></h2>
-		<ul class="listStyle-01 row">
-		<li>OpenLayers에서 사용되는 메서드로, 지도에 상호작용을 추가합니다. 이를 통해 사용자는 지도 영역 내에서 확대, 축소, 이동 등의 조작을 수행할 수 있습니다.</li></br>
-		<ul style="padding-left:10px;">
-				<li><strong style="font-size: 13px; opacity: 0.6; display: inline;">Parameters</strong>:</br>• interaction (ol.interaction.Interaction): 추가할 상호작용 객체입니다. 이 매개변수는 "ol.interaction.Interaction" 클래스의 인스턴스여야 합니다. OpenLayers에서 제공하는 기본 상호작용 또는 사용자가 직접 작성한 상호작용을 인스턴스화하여 전달할 수 있습니다.</li>
-				<li><strong style="font-size: 13px; opacity: 0.6; display: inline;">Returns</strong>:</br> • void: 상호작용을 지도에 추가한 후, 반환 값이 없습니다.</li>
-				<li><strong style="font-size: 13px; opacity: 0.6; display: inline;">Usage Example</strong>:</br>
-			<pre><code class="javascript">// 줌 슬라이더 상호작용 생성
-var zoomSliderInteraction = new ol.interaction.ZoomSlider();
+</code>
+			</pre>
+			</li>
+
+		</ul>
+	</ul>
+
+	<h2 id="Map_addInteraction">
+		addInteraction<span
+			style="font-size: 14px; display: inline; font-weight: lighter;">(interaction)</span>
+	</h2>
+	<ul class="listStyle-01 row">
+		<li>지도에 상호작용을 추가한다. 상호작용은 사용자와의 상호작용을 통해 지도 위에서 발생하는 이벤트를 처리하고,
+			지도의 동작을 제어하는 기능을 제공한다. 예를 들어 클릭, 드래그, 확대/축소 등의 동작에 대한 이벤트 처리를 추가할 수
+			있다.</li>
+		</br>
+		<ul style="padding-left: 10px;">
+			<li><strong
+				style="font-size: 13px; opacity: 0.6; display: inline;">Explanation</strong>:</br>map.addInteraction(zoomSliderInteraction);는
+				생성한 ZoomSlider 상호작용을 맵에 추가한다. 이를 통해 지도에 확대/축소 슬라이더 기능이 제공된다.</li>
+			<p style="text-align: right;">[작성일: 2023-05-23]</p>
+			<pre>
+				<code class="javascript">var zoomSliderInteraction = new ol.interaction.ZoomSlider();
 map.addInteraction(zoomSliderInteraction);
-</code></pre></li>
-			</ul>
-			</ul>
-			
-			<h2 id="Map_addLayer">addLayer<span style="font-size: 14px; display: inline; font-weight: lighter;">(layer)</span></h2>
-		<ul class="listStyle-01 row">
-		<li>OpenLayers에서 사용되는 메서드로, 지도에 레이어를 추가하는 역할을 합니다. 해당 메서드는 ol.PluggableMap 클래스에 속해 있습니다.</li></br>
-		<ul style="padding-left:10px;">
-				<li><strong style="font-size: 13px; opacity: 0.6; display: inline;">Parameters</strong>:</br>• layer (ol.layer.Layer): 추가할 레이어 객체입니다. 이 매개변수는 ol.layer.Layer 클래스의 인스턴스여야 합니다.</li>
-				<li><strong style="font-size: 13px; opacity: 0.6; display: inline;">Returns</strong>:</br> • void: 레이어를 지도에 추가한 후, 반환 값이 없습니다.</li>
-				<li><strong style="font-size: 13px; opacity: 0.6; display: inline;">Usage Example</strong>:</br>
-			<pre><code class="javascript">// 레이어 생성
+</code>
+			</pre>
+			</li>
+		</ul>
+	</ul>
+
+	<h2 id="Map_addLayer">
+		addLayer<span
+			style="font-size: 14px; display: inline; font-weight: lighter;">(layer)</span>
+	</h2>
+	<ul class="listStyle-01 row">
+		<li>OpenStreetMap 데이터를 사용하여 레이어를 생성하고, 해당 레이어를 지도에 추가한다.</li>
+		</br>
+		<ul style="padding-left: 10px;">
+			<li><strong
+				style="font-size: 13px; opacity: 0.6; display: inline;">Explanation</strong>:</br>map.addLayer(layer)를
+				호출하여 생성한 레이어를 지도에 추가한다. </br>이를 통해 생성한 레이어가 지도 위에 표시되며, OpenStreetMap
+				데이터가 해당 레이어를 통해 지도에 나타난다.</li>
+			<p style="text-align: right;">[작성일: 2023-05-23]</p>
+			<pre>
+				<code class="javascript">// 레이어 생성
 var layer = new ol.layer.Tile({
   source: new ol.source.OSM()
 });
 
 // 지도에 레이어 추가
 map.addLayer(layer);
-</code></pre></li>
-			</ul>
-			</ul>
-			
-			<h2 id="Map_addOverlay">addOverlay<span style="font-size: 14px; display: inline; font-weight: lighter;">(overlay)</span></h2>
-		<ul class="listStyle-01 row">
-		<li>OpenLayers에서 사용되는 메서드로, 지도에 오버레이(overlay)를 추가합니다. 오버레이는 지도 위에 다양한 그래픽 요소를 표시하는 역할을 합니다.</li></br>
-		<ul style="padding-left:10px;">
-				<li><strong style="font-size: 13px; opacity: 0.6; display: inline;">Parameters</strong>:</br>• overlay (ol.Overlay): 추가할 오버레이 객체입니다. 이 매개변수는 "ol.Overlay" 클래스의 인스턴스여야 합니다. OpenLayers에서 제공하는 기본 오버레이 또는 사용자가 직접 작성한 오버레이를 인스턴스화하여 전달할 수 있습니다.</li>
-				<li><strong style="font-size: 13px; opacity: 0.6; display: inline;">Returns</strong>:</br> • void: 오버레이를 지도에 추가한 후, 반환 값이 없습니다.</li>
-				<li><strong style="font-size: 13px; opacity: 0.6; display: inline;">Usage Example</strong>:</br>
-			<pre><code class="javascript">var overlay = new ol.Overlay({
+</code>
+			</pre>
+			</li>
+		</ul>
+	</ul>
+
+	<h2 id="Map_addOverlay">
+		addOverlay<span
+			style="font-size: 14px; display: inline; font-weight: lighter;">(overlay)</span>
+	</h2>
+	<ul class="listStyle-01 row">
+		<li>오버레이를 생성하고, 오버레이로 사용할 HTML 요소와 위치를 설정한 후, 해당 오버레이를 지도에 추가한다.</li>
+		</br>
+		<ul style="padding-left: 10px;">
+			<li><strong
+				style="font-size: 13px; opacity: 0.6; display: inline;">Explanation</strong>:</br>map.addOverlay(overlay)를
+				호출하여 생성한 오버레이를 지도에 추가한다. 이를 통해 생성한 오버레이가 지도 위에 나타나게 된다.</li>
+			<p style="text-align: right;">[작성일: 2023-05-23]</p>
+			<pre>
+				<code class="javascript">var overlay = new ol.Overlay({
   element: document.getElementById('overlay'), // 오버레이로 사용할 HTML 요소
-  position: ol.proj.fromLonLat([127.0, 37.0]), // 오버레이의 위치 설정
-  positioning: 'center-center' // 오버레이의 위치 기준 설정
+  position: [127.0, 37.0], // 오버레이의 위치 설정 (경도, 위도)
 });
 
 map.addOverlay(overlay);
-</code></pre></li>
-			</ul>
-			</ul>
+</code>
+			</pre>
+			</li>
+		</ul>
+	</ul>
 
 </div>
 </div>

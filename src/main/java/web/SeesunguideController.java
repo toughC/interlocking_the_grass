@@ -100,12 +100,6 @@ public class SeesunguideController {
 			return "redirect:/help/";
 		}
 	}
-	/*@RequestMapping(value = "help")
-	public String help() {
-		System.out.println("도움말 접속");
-		return "/help";
-
-	}*/
 
 	@RequestMapping(value = "/main")
 	public String main() {

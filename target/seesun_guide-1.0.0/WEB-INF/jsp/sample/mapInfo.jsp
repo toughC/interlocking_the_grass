@@ -8,7 +8,7 @@
 <title>지도 정보 얻어오기 - Seesunguide 개발자 센터</title>
 <meta charset="UTF-8">
 <style>
- .mapButtonContainer {
+.mapButtonContainer {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -20,6 +20,7 @@
 	background-color: #fff;
 	box-shadow: rgba(0, 0, 0, 0.3) 1px 1px 2px;
 }
+
 .mapButton {
 	display: inline-block;
 	border: none;
@@ -35,6 +36,7 @@
 	-webkit-transition: background-color 0.4s ease-in-out;
 	transition: background-color 0.4s ease-in-out;
 }
+
 .mapButton.active {
 	color: #fff;
 	background-color: #243447;
@@ -48,14 +50,17 @@
 	<h1>지도 정보 얻어오기</h1>
 	<ul class="listStyle-01 row">
 		<li class="textContent">지도 레벨, 중심좌표, 지도 타입, 지도 영역정보를 얻어와 표출합니다.</li>
-		<a href="" target="_blank"><li class="textContent">지도 타입을 보시려면 여기를 클릭하세요!</li></a>
+		<a href="" target="_blank"><li class="textContent">지도 타입을
+				보시려면 여기를 클릭하세요!</li></a>
 	</ul>
-	<div id="map" style="width: 100%; height: 330px; position: relative; overflow: hidden; background: url('https://t1.daumcdn.net/mapjsapi/images/2x/bg_tile.png');"></div>
-	
+	<p style="text-align: right;">[작성일: 2023-05-18]</p>
+	<div id="map"
+		style="width: 100%; height: 330px; position: relative; overflow: hidden; background: url('https://t1.daumcdn.net/mapjsapi/images/2x/bg_tile.png');"></div>
+
 	<div style="border: 2px solid black; padding: 5px; max-width: 200px;">
-  		<div style="display: flex; justify-content: center;">
-		    <button id="normalButton" class="mapButton active" value="normal">지도</button>
-		    <button id="skyviewButton" class="mapButton" value="skyview">스카이뷰</button>
+		<div style="display: flex; justify-content: center;">
+			<button id="normalButton" class="mapButton active" value="normal">지도</button>
+			<button id="skyviewButton" class="mapButton" value="skyview">스카이뷰</button>
 		</div>
 	</div>
 
@@ -118,13 +123,16 @@
 	</script>
 
 	<div class="wrap_tab">
-        <ul>
-            <li class="code-01" onclick="toggleCodeDisplay('jsCode')">Javascript</li>
-            <li class="code-02" onclick="toggleCodeDisplay('htmlCode')">Javascript + HTML</li>
-        </ul>
+		<ul>
+			<li class="code-01" onclick="toggleCodeDisplay('jsCode')">Javascript</li>
+			<li class="code-02" onclick="toggleCodeDisplay('htmlCode')">Javascript
+				+ HTML</li>
+		</ul>
 		<div id="jsCode" class="tabbody">
 			<figure class="highlight">
-				<pre><code class="language-js" style="margin-top: 0;margin-bottom:30px;" data-lang="js">
+				<pre>
+					<code class="language-js"
+						style="margin-top: 0; margin-bottom: 30px;" data-lang="js">
 // 지도를 표시할 div 요소를 가져옵니다.
 var mapContainer = document.getElementById('map');
 
@@ -160,12 +168,16 @@ var map = new ol.Map({
 		})
 });
 
-</code></pre>
+</code>
+				</pre>
 			</figure>
 		</div>
 		<div id="htmlCode" class="tabbody" style="display: none;">
-		<figure class="highlight">
-			<pre><code class="language-html" style="margin-top: 0;margin-bottom:30px;" zssz666data-lang="html">
+			<figure class="highlight">
+				<pre>
+					<code class="language-html"
+						style="margin-top: 0; margin-bottom: 30px;"
+						zssz666data-lang="html">
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -243,7 +255,8 @@ var map = new ol.Map({
 &lt;/body&gt;
 &lt;/html&gt;
 
-</code></pre>
+</code>
+				</pre>
 			</figure>
 		</div>
 	</div>

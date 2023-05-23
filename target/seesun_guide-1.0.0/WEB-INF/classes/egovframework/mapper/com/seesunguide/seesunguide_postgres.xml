@@ -5,7 +5,7 @@
 
 	<select id="selectList" resultType="HashMap"
 		parameterType="HashMap">
-		select * from dep where parent_cd is null
+		select * from dep where parent_cd is null order by dep.dept_cd;
 	</select>
 
 	<select id="searchList" resultType="HashMap"

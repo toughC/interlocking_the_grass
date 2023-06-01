@@ -69,9 +69,9 @@ public class SeesunguideController {
 			return "sample/addMapCustomControl";
 		}
 
-		@GetMapping("/testBasicMap")
-		public String testBasicMap() {
-			return "sample/testBasicMap";
+		@GetMapping("/drawShape")
+		public String drawShape() {
+			return "sample/drawShape";
 		}
 
 		@GetMapping("/sample/{path}")

@@ -19,8 +19,7 @@
 		<li class="textContent">지도를 생성하는 가장 기본적인 예제입니다.</li>
 	</ul>
 	<p style="text-align: right;">[작성일: 2023-05-18]</p>
-	<div id="map"
-		style="width: 100%; height: 330px; position: relative; overflow: hidden; background: url("https://t1.daumcdn.net/mapjsapi/images/2x/bg_tile.png");"></div>
+	<div id="map" style="width: 100%; height: 330px;"></div>
 
 	<script type="text/javascript">
 		// 레이어를 포함한 지도 객체 생성

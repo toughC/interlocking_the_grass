@@ -54,8 +54,7 @@
 				보시려면 여기를 클릭하세요!</li></a>
 	</ul>
 	<p style="text-align: right;">[작성일: 2023-05-18]</p>
-	<div id="map"
-		style="width: 100%; height: 330px; position: relative; overflow: hidden; background: url('https://t1.daumcdn.net/mapjsapi/images/2x/bg_tile.png');"></div>
+	<div id="map" style="width: 100%; height: 330px;"></div>
 
 	<div style="border: 2px solid black; padding: 5px; max-width: 200px;">
 		<div style="display: flex; justify-content: center;">

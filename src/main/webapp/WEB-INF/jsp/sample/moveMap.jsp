@@ -22,8 +22,7 @@
 			이동시킬 수도 있습니다.</li>
 	</ul>
 	<p style="text-align: right;">[작성일: 2023-05-18]</p>
-	<div id="map"
-		style="width: 100%; height: 330px; position: relative; overflow: hidden; background: url("https://t1.daumcdn.net/mapjsapi/images/2x/bg_tile.png");"></div>
+	<div id="map" style="width: 100%; height: 330px;"></div>
 
 	<button id="moveButton" class="zoomBtn">지도 이동하기</button>
 	<button id="animateButton" class="zoomBtn">부드럽게 이동하기</button>

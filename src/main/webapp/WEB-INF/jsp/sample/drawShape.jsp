@@ -21,6 +21,7 @@
 	</ul>
 	<p style="text-align: right;">[작성일: 2023-06-01]</p>
 	<div id="map" style="width: 100%; height: 330px;"></div>
+	
 	<button id="circleButton" class="zoomBtn">Circle</button>
 	<button id="lineStringButton" class="zoomBtn">LineString</button>
 	<button id="pointButton" class="zoomBtn">Point</button>

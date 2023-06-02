@@ -69,9 +69,19 @@ public class SeesunguideController {
 			return "sample/addMapCustomControl";
 		}
 
+		@GetMapping("/drawFeatures")
+		public String drawFeatures() {
+			return "sample/drawFeatures";
+		}
+		
 		@GetMapping("/drawShape")
 		public String drawShape() {
 			return "sample/drawShape";
+		}
+		
+		@GetMapping("/drawLineStringArrows")
+		public String drawLineStringArrows() {
+			return "sample/drawLineStringArrows";
 		}
 
 		@GetMapping("/sample/{path}")

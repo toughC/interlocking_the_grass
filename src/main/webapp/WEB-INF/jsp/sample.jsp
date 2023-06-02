@@ -13,12 +13,11 @@
 <c:import url="/WEB-INF/jsp/inc/body.jsp"></c:import>
 <h1>지도</h1>
 <ul class="map-container"></ul>
+<h1>오버레이</h1>
+<ul class="map-container"></ul>
 </div>
 
 </div>
 </div>
 </body>
 </html>
-
-
-

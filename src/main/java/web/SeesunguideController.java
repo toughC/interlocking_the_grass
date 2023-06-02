@@ -83,6 +83,11 @@ public class SeesunguideController {
 		public String drawLineStringArrows() {
 			return "sample/drawLineStringArrows";
 		}
+		
+		@GetMapping("/measure")
+		public String measure() {
+			return "sample/measure";
+		}
 
 		@GetMapping("/sample/{path}")
 		public String redirect(@PathVariable String path) {

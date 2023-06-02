@@ -17,9 +17,10 @@
 <body>
 	<h1>점, 선, 다각형, 원 그리기</h1>
 	<ul class="listStyle-01 row">
-		<li class="textContent">지도 위에 점, 선, 다각형, 원을 그릴 수 있습니다.</li>
+		<li class="textContent" style="margin: 2px 0!important;" >지도 위에 점, 선, 다각형, 원을 그릴 수 있습니다.</li>
+		<li class="textContent" style="margin: 2px 0!important; font-weight: normal; color: #489ebf !important;">선 그리기는 마우스를 더블클릭하면 그리기가 종료됩니다.</li>
 	</ul>
-	<p style="text-align: right;">[작성일: 2023-06-02]</p>
+	<p style="text-align: right;margin-bottom: 3px;margin-bottom: 3px;">[작성일: 2023-06-02]</p>
 	<div id="map" style="width: 100%; height: 330px;"></div>
 	
 	<button id="circleButton" class="zoomBtn">Circle</button>
@@ -27,7 +28,7 @@
 	<button id="pointButton" class="zoomBtn">Point</button>
 	<button id="polygonButton" class="zoomBtn">Polygon</button>
 	<button id="noneButton" class="zoomBtn">None</button>
-	
+		
 <script type="text/javascript">
     var raster = new ol.layer.Tile({
         source: new ol.source.OSM()

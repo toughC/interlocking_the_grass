@@ -75,9 +75,15 @@
   background-color: transparent; /* 스크롤바 트랙 색상 */
 }
 
+.hljs-comment{
+	color: #969896;
+}
+
 .hljs-ln-code {
   /* 왼쪽 여백 */
   padding-left: 10px !important;
+  /* 아래쪽 여백 */
+  padding-bottom: 5px !important;
   /* 글자 사이즈 */
   font-size: 11pt;
   /* 공백 설정 */
@@ -86,28 +92,4 @@
   line-height: 15px;
 }
 
-.dark-mode {
-  /* Dark mode 스타일 조정 */
-  background-color: #212121;
-  color: #ffffff;
-}
 
-.dark-mode .code-button {
-  /* 버튼 스타일 조정 */
-  background-color: #78797a;
-  color: #ffffff;
-}
-
-.dark-mode .code-button.active {
-  /* 활성화된 버튼 스타일 조정 */
-  background-color: #f3f5f5;
-  color: #000000;
-  border-bottom: 1px solid transparent;
-}
-
-.dark-mode .code-button.inactive {
-  /* 비활성화된 버튼 스타일 조정 */
-  background-color: #e4e4e4;
-  color: #78797a;
-  border-bottom: none;
-}

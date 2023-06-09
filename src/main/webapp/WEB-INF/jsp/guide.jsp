@@ -23,7 +23,7 @@
 	</ul>
 	<div class="info">
 		<p>설치하려면 아래 과정이 필요합니다.</p>
-		<p style="text-align: right;">[작성일: 2023-05-11]</p>
+		<p style="text-align: right;">마지막 수정 2023.05.11</p>
 		<div class="textBox">
 			<ul>
 				<li>1. <a class="underover"
@@ -71,7 +71,7 @@
 	</ul>
 	<div class="info">
 		<p>설치하려면 아래 과정이 필요합니다.</p>
-		<p style="text-align: right;">[작성일: 2023-05-11]</p>
+		<p style="text-align: right;">마지막 수정 2023.05.11</p>
 		<div class="textBox">
 			<ul>
 				<li>1. <a class="underover"
@@ -113,7 +113,7 @@
 	</ul>
 	<div class="info">
 		<p>설치하고 Tomcat과 연동하려면 아래 과정이 필요합니다.</p>
-		<p style="text-align: right;">[작성일: 2023-05-11]</p>
+		<p style="text-align: right;">마지막 수정 2023.05.11</p>
 		<div class="textBox">
 			<ul>
 				<li>1. <a class="underover"
@@ -165,7 +165,7 @@
 	</ul>
 	<div class="info">
 		<p>설치하려면 아래 과정이 필요합니다.</p>
-		<p style="text-align: right;">[작성일: 2023-05-11]</p>
+		<p style="text-align: right;">마지막 수정 2023.05.11</p>
 		<div class="textBox">
 			<ul>
 				<li>1. <a class="underover"
@@ -190,7 +190,7 @@
 
 	<div class="section">
 		<h2 id="step1">지도를 그리는 Javascript API 추가</h2>
-		<p style="text-align: right;">[작성일: 2023-05-11]</p>
+		<p style="text-align: right;">마지막 수정 2023.05.11</p>
 		<div class="textBox">
 			<ul class="listStyle-01 row">
 				<pre>
@@ -209,12 +209,11 @@
 
 	<div class="section">
 		<h2 id="step2">지도를 띄우는 코드 작성</h2>
-		<p style="text-align: right;">[작성일: 2023-05-11]</p>
+		<p style="text-align: right;">마지막 수정 2023.05.11</p>
 		<div class="textBox">
 			<ul class="listStyle-01 row">
 				<pre>
-		<code class="language-js ">
-var mapTarget = document.getElementById('map');
+		<code class="language-js ">var mapTarget = document.getElementById('map');
 var map = new ol.Map({
 		target : mapTarget,
 		layers : [ new ol.layer.Tile({
@@ -244,8 +243,7 @@ var map = new ol.Map({
 				</br>
 				<li>전체 코드는 아래와 같습니다.</li>
 				<pre>
-			<code class="language-html">
-&lt;!DOCTYPE html&gt;
+			<code class="language-html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
 		&lt;meta charset="utf-8"/&gt;

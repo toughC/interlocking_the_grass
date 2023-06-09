@@ -22,7 +22,7 @@
 			축소를 제어할 수 있는 도구를 쉽게 지도 위에 올릴 수 있습니다. 각각 지도 타입 컨트롤, 지도 줌 컨트롤이라고 부르며,
 			아래 예제와 같이 지도 위에 표시될 위치를 지정할 수도 있습니다.</li>
 	</ul>
-	<p style="text-align: right;margin-bottom: 3px;">[작성일: 2023-05-18]</p>
+	<p style="text-align: right;margin-bottom: 3px;">마지막 수정 2023.05.18</p>
 	<div id="map" style="width: 100%; height: 330px;"></div>
 
 	<script>

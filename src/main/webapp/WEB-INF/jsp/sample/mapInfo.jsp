@@ -53,7 +53,7 @@
 		<a href="" target="_blank"><li class="textContent" style="margin: 2px 0!important;">지도 타입을
 				보시려면 여기를 클릭하세요!</li></a>
 	</ul>
-	<p style="text-align: right;margin-bottom: 3px;">[작성일: 2023-05-18]</p>
+	<p style="text-align: right;margin-bottom: 3px;">마지막 수정 2023.05.18</p>
 	<div id="map" style="width: 100%; height: 330px;"></div>
 
 	<div style="border: 2px solid black; padding: 5px; max-width: 200px;">

@@ -19,7 +19,7 @@
 	<ul class="listStyle-01 row">
 		<li class="textContent">지도 위에 사각형, 박스, 별을 그릴 수 있습니다.</li>
 	</ul>
-	<p style="text-align: right;margin-bottom: 3px;">[작성일: 2023-06-02]</p>
+	<p style="text-align: right;margin-bottom: 3px;">마지막 수정 2023.06.02</p>
 	<div id="map" style="width: 100%; height: 330px;"></div>
 	
 	<button id="squareButton" class="zoomBtn">Square</button>

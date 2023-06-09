@@ -95,6 +95,10 @@ body{height: 100vh;overflow:hidden}
 .map-container>li .DE_063{background-image: url('../images/map-sample/063-map.png');}
 .map-container>li .DE_064{background-image: url('../images/map-sample/064-map.png');}
 .map-container>li .DE_065{background-image: url('../images/map-sample/065-map.png');}
+.map-container>li .DE_078{background-image: url('../images/map-sample/078-map.png');}
+.map-container>li .DE_079{background-image: url('../images/map-sample/079-map.png');}
+.map-container>li .DE_080{background-image: url('../images/map-sample/080-map.png');}
+.map-container>li .DE_081{background-image: url('../images/map-sample/081-map.png');}
 /* --------------------------------------------------------------codBox----------------------------------------------------------------------- */
 .section .codeBox{width: 100%; background: #232323; border: solid 3px #858585; border-radius: 4px;}
 .section .codeBox .textArea{margin: 10px 20px;    /* 임시폰트값 */font: 600 30px 'pretendard'; color: #989898; opacity: 0.5;}

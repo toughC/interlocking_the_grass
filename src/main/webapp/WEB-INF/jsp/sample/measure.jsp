@@ -55,7 +55,7 @@
 	<ul class="listStyle-01 row">
 		<li class="textContent">지도를 마우스로 클릭하면 선과 다각형 그리기가 시작되고 마우스를 더블클릭하면 선과 다각형 그리기가 종료되면서 그려진 선의 거리(단위 : m, km)와 다각형의 총 면적(단위 : m², km²)을 표시합니다.</li>
 	</ul>
-	<p style="text-align: right; margin-bottom: 3px;">[작성일: 2023-06-02]</p>
+	<p style="text-align: right; margin-bottom: 3px;">마지막 수정 2023.06.08</p>
 	<div id="map" style="width: 100%; height: 330px;"></div>
 
 	<button id="lengthButton" class="zoomBtn">Length (LineString)</button>

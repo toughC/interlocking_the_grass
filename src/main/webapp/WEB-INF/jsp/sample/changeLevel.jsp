@@ -19,7 +19,7 @@
 	<ul class="listStyle-01 row">
 		<li class="textContent">지도 레벨을 지도 객체 메소드를 호출해서 변경합니다.</li>
 	</ul>
-	<p style="text-align: right;margin-bottom: 3px;">[작성일: 2023-05-18]</p>
+	<p style="text-align: right;margin-bottom: 3px;">마지막 수정 2023.05.18</p>
 	<div id="map" style="width: 100%; height: 330px;"></div>
 
 	<button id="zoom-in" class="zoomBtn">Zoom in</button>

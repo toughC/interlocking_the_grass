@@ -79,7 +79,7 @@
 			수 있습니다. 컨트롤의 색이나 크기 등을 변경해야 할때 유용하겠지요. 아래 예제의 Javascript+HTML 코드를
 			참고해보세요.</li>
 	</ul>
-	<p style="text-align: right;margin-bottom: 3px;">[작성일: 2023-05-18]</p>
+	<p style="text-align: right;margin-bottom: 3px;">마지막 수정 2023.05.18</p>
 	<div id="map1" style="width: 100%; height: 330px;"></div>
 	</br>
 	<div id="map2" style="width: 100%; height: 330px;"></div>

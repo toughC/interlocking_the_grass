@@ -135,6 +135,8 @@ function sampleBodyList() {
                 	description = "지도 위에 사각형, 박스, 별을 그릴 수 있습니다.";
                 else if (data[i].dept_tag == "drawLineStringArrows")
                 	description = "지도 상에서 원하는 방향으로 라인을 그리고, 그 라인들을 연결하여 화살표를 표현할 수 있습니다.";
+                else if (data[i].dept_tag == "measure")
+                	description = "지도를 마우스로 클릭하면 선과 다각형 그리기가 시작되고 마우스를 더블클릭하면 선과 다각형 그리기가 종료되면서 그려진 선의 거리(단위 : m, km)와 다각형의 총 면적(단위 : m², km²)을 표시합니다.";
 
                 if (data[i].parent_cd == 'DE_013')
                     htmlArrMap.push(`<li><div class="scrollable-content"><a class="${data[i].dept_cd}" data-dept-tag="${data[i].dept_tag}"><div class="description-container"><p>${description}</p></div></a><div>${dept_name}</div></div></li>`);
@@ -174,16 +176,19 @@ function handleMenuClick(event) {
 	}
 
 
+
 //darkMode 상태를 저장하는 함수
 function saveDarkModeState() {
   var isDarkModeOn = $('body').hasClass('darkMode');
   localStorage.setItem('darkModeState', isDarkModeOn);
 }
+
 // darkMode 상태를 로드하는 함수
 function loadDarkModeState() {
   var isDarkModeOn = localStorage.getItem('darkModeState') === 'true';
   $('body').toggleClass('darkMode', isDarkModeOn);
 }
+
 $('.ModeBtn').click(function() {
   $('body').toggleClass('darkMode');
   var isDarkMode = $('body').hasClass('darkMode');
@@ -195,62 +200,76 @@ $('.ModeBtn').click(function() {
   }
 });
 
-function toggleCodeDisplay(codeType, button) {
-	var jsCode = document.getElementById('jsCode');
-	var htmlCode = document.getElementById('htmlCode');
-	var jsCodeBtn = document.querySelector('.code-01');
-	var htmlCodeBtn = document.querySelector('.code-02');
-	
-	if(jsCode !== null){
-		if(localStorage.getItem('darkModeState') === 'true'){
-			if (codeType === 'jsCode') {
-				jsCode.style.display = 'block';
-				htmlCode.style.display = 'none';
-				jsCodeBtn.style.backgroundColor = '#414141';
-				jsCodeBtn.style.color = '#fff';
-				jsCodeBtn.style.borderBottom = '1px solid transparent';
-				htmlCodeBtn.style.backgroundColor = '#000';
-				htmlCodeBtn.style.color = '#d3d3d3';
-				htmlCodeBtn.style.borderBottom = 'none';
-				
-			} else if (codeType === 'htmlCode') {
-				jsCode.style.display = 'none';
-				htmlCode.style.display = 'block';
-				jsCodeBtn.style.backgroundColor = '#000';
-				jsCodeBtn.style.color = '#d3d3d3';
-				jsCodeBtn.style.borderBottom = 'none';
-				htmlCodeBtn.style.backgroundColor = '#414141';
-				htmlCodeBtn.style.color = '#fff';
-				htmlCodeBtn.style.borderBottom = '1px solid transparent';
-			}
-		}
-		else{
-			if (codeType === 'jsCode') {
-				jsCode.style.display = 'block';
-				htmlCode.style.display = 'none';
-				jsCodeBtn.style.backgroundColor = '#f3f5f5';
-				jsCodeBtn.style.color = '#000';
-				jsCodeBtn.style.borderBottom = '1px solid transparent';
-				htmlCodeBtn.style.backgroundColor = '#e4e4e4';
-				htmlCodeBtn.style.color = '#78797a';
-				htmlCodeBtn.style.borderBottom = 'none';
-				
-			} else if (codeType === 'htmlCode') {
-				jsCode.style.display = 'none';
-				htmlCode.style.display = 'block';
-				jsCodeBtn.style.backgroundColor = '#e4e4e4';
-				jsCodeBtn.style.color = '#78797a';
-				jsCodeBtn.style.borderBottom = 'none';
-				htmlCodeBtn.style.backgroundColor = '#f3f5f5';
-				htmlCodeBtn.style.color = '#000';
-				htmlCodeBtn.style.borderBottom = '1px solid transparent';
-			}
-		}
+function toggleCodeDisplay(codeType) {
+	  var jsCode = document.getElementById('jsCode');
+	  var htmlCode = document.getElementById('htmlCode');
+	  var jsCodeBtn = document.querySelector('.code-01');
+	  var htmlCodeBtn = document.querySelector('.code-02');
+	  var jsCodeBody = document.querySelector('.language-js');
+	  var htmlCodeBody = document.querySelector('.language-html');
+
+	  if (jsCode !== null) {
+	    if (localStorage.getItem('darkModeState') === 'true') {
+	      if (codeType === 'jsCode') {
+	        jsCode.style.display = 'block';
+	        htmlCode.style.display = 'none';
+	        jsCodeBtn.style.backgroundColor = '#414141';
+	        jsCodeBtn.style.color = '#fff';
+	        jsCodeBody.style.color = '#D1D9E1';
+	        jsCodeBtn.style.borderBottom = '1px solid transparent';
+	        htmlCodeBtn.style.backgroundColor = '#000';
+	        htmlCodeBtn.style.color = '#d3d3d3';
+	        htmlCodeBtn.style.borderBottom = 'none';
+	      } else if (codeType === 'htmlCode') {
+	        jsCode.style.display = 'none';
+	        htmlCode.style.display = 'block';
+	        jsCodeBtn.style.backgroundColor = '#000';
+	        jsCodeBtn.style.color = '#d3d3d3';
+	        jsCodeBtn.style.borderBottom = 'none';
+	        htmlCodeBtn.style.backgroundColor = '#414141';
+	        htmlCodeBtn.style.color = '#fff';
+	        htmlCodeBody.style.color = '#D1D9E1';
+	        htmlCodeBtn.style.borderBottom = '1px solid transparent';
+	      }
+	    } else {
+	      if (codeType === 'jsCode') {
+	        jsCode.style.display = 'block';
+	        htmlCode.style.display = 'none';
+	        jsCodeBtn.style.backgroundColor = '#f3f5f5';
+	        jsCodeBtn.style.color = '#000';
+	        jsCodeBody.style.color = '#6c6c6a';
+	        jsCodeBtn.style.borderBottom = '1px solid transparent';
+	        htmlCodeBtn.style.backgroundColor = '#e4e4e4';
+	        htmlCodeBtn.style.color = '#78797a';
+	        htmlCodeBtn.style.borderBottom = 'none';
+	      } else if (codeType === 'htmlCode') {
+	        jsCode.style.display = 'none';
+	        htmlCode.style.display = 'block';
+	        jsCodeBtn.style.backgroundColor = '#e4e4e4';
+	        jsCodeBtn.style.color = '#78797a';
+	        jsCodeBtn.style.borderBottom = 'none';
+	        htmlCodeBtn.style.backgroundColor = '#f3f5f5';
+	        htmlCodeBtn.style.color = '#000';
+	        htmlCodeBody.style.color = '#6c6c6a';
+	        htmlCodeBtn.style.borderBottom = '1px solid transparent';
+	      }
+	    }
+	  }
+
+	  localStorage.setItem('selectedCode', codeType); // 코드 타입 저장
 	}
-}
 
-document.addEventListener('DOMContentLoaded', function() {
-	// 초기 상태로 'jsCode'를 선택하도록 설정
-	toggleCodeDisplay('jsCode', document.querySelector('.code-01'));
-
-});
+	document.addEventListener('DOMContentLoaded', function() {
+	  var selectedCode = localStorage.getItem('selectedCode') || 'jsCode';
+	  toggleCodeDisplay(selectedCode);
+	  
+	  // 토글 버튼 클릭 시 코드 타입 변경
+	  document.querySelectorAll('.code-btn').forEach(function(btn) {
+	    btn.addEventListener('click', function() {
+	      var codeType = this.dataset.codeType;
+	      toggleCodeDisplay(codeType);
+	    });
+	  });
+	  
+	  loadDarkModeState(); // dark mode 상태 로드
+	});

@@ -21,7 +21,7 @@
 			이동시킬 수 있습니다. 또, 지도가 표시되고 있는 영역크기를 벗어나지 않는 거리라면 애니메이션 효과처럼 지도를 부드럽게
 			이동시킬 수도 있습니다.</li>
 	</ul>
-	<p style="text-align: right;margin-bottom: 3px;">[작성일: 2023-05-18]</p>
+	<p style="text-align: right;margin-bottom: 3px;">마지막 수정 2023.05.18</p>
 	<div id="map" style="width: 100%; height: 330px;"></div>
 
 	<button id="moveButton" class="zoomBtn">지도 이동하기</button>

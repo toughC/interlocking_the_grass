@@ -88,6 +88,11 @@ public class SeesunguideController {
 		public String measure() {
 			return "sample/measure";
 		}
+		
+		@GetMapping("/wmsTiled")
+		public String wmsTiled() {
+			return "sample/wmsTiled";
+		}
 
 		@GetMapping("/sample/{path}")
 		public String redirect(@PathVariable String path) {

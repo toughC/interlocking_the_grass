@@ -18,7 +18,7 @@
 	<ul class="listStyle-01 row">
 		<li class="textContent">지도를 생성하는 가장 기본적인 예제입니다.</li>
 	</ul>
-	<p style="text-align: right;margin-bottom: 3px;">[작성일: 2023-05-18]</p>
+	<p style="text-align: right;margin-bottom: 3px;">마지막 수정 2023.05.18</p>
 	<div id="map" style="width: 100%; height: 330px;"></div>
 
 	<script type="text/javascript">

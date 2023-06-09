@@ -30,7 +30,7 @@
 				style="font-size: 13px; opacity: 0.6; display: inline;">Explanation</strong>:</br>map.addControl(zoomslider);는
 				생성한 ZoomSlider 컨트롤을 맵에 추가하는 코드이다. </br>이렇게 추가된 컨트롤은 지도 위에 나타나고 사용자에게 확대 및
 				축소 기능을 제공한다.</li>
-			<p style="text-align: right;">[작성일: 2023-05-23]</p>
+			<p style="text-align: right;">마지막 수정 2023.05.23</p>
 			<pre>
 				<code class="javascript">zoomslider = new ol.control.ZoomSlider();
 map.addControl(zoomslider);
@@ -54,7 +54,7 @@ map.addControl(zoomslider);
 			<li><strong
 				style="font-size: 13px; opacity: 0.6; display: inline;">Explanation</strong>:</br>map.addInteraction(zoomSliderInteraction);는
 				생성한 ZoomSlider 상호작용을 맵에 추가한다. 이를 통해 지도에 확대/축소 슬라이더 기능이 제공된다.</li>
-			<p style="text-align: right;">[작성일: 2023-05-23]</p>
+			<p style="text-align: right;">마지막 수정 2023.05.23</p>
 			<pre>
 				<code class="javascript">var zoomSliderInteraction = new ol.interaction.ZoomSlider();
 map.addInteraction(zoomSliderInteraction);
@@ -76,7 +76,7 @@ map.addInteraction(zoomSliderInteraction);
 				style="font-size: 13px; opacity: 0.6; display: inline;">Explanation</strong>:</br>map.addLayer(layer)를
 				호출하여 생성한 레이어를 지도에 추가한다. </br>이를 통해 생성한 레이어가 지도 위에 표시되며, OpenStreetMap
 				데이터가 해당 레이어를 통해 지도에 나타난다.</li>
-			<p style="text-align: right;">[작성일: 2023-05-23]</p>
+			<p style="text-align: right;">마지막 수정 2023.05.23</p>
 			<pre>
 				<code class="javascript">// 레이어 생성
 var layer = new ol.layer.Tile({
@@ -102,7 +102,7 @@ map.addLayer(layer);
 			<li><strong
 				style="font-size: 13px; opacity: 0.6; display: inline;">Explanation</strong>:</br>map.addOverlay(overlay)를
 				호출하여 생성한 오버레이를 지도에 추가한다. 이를 통해 생성한 오버레이가 지도 위에 나타나게 된다.</li>
-			<p style="text-align: right;">[작성일: 2023-05-23]</p>
+			<p style="text-align: right;">마지막 수정 2023.05.23</p>
 			<pre>
 				<code class="javascript">var overlay = new ol.Overlay({
   element: document.getElementById('overlay'), // 오버레이로 사용할 HTML 요소

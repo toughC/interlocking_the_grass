@@ -20,7 +20,7 @@
 		<li class="textContent" style="margin: 2px 0!important;">지도 상에서 원하는 방향으로 라인을 그리고, 그 라인들을 연결하여 화살표를 표현할 수 있습니다.</li>
 		<li class="textContent" style="margin: 2px 0!important;font-weight: normal; color: #489ebf !important;">선 그리기는 마우스를 더블클릭하면 그리기가 종료됩니다.</li>
 	</ul>
-	<p style="text-align: right;margin-bottom: 3px;">[작성일: 2023-06-02]</p>
+	<p style="text-align: right;margin-bottom: 3px;">마지막 수정 2023.06.08</p>
 	<div id="map" style="width: 100%; height: 330px;"></div>
 		
 <script type="text/javascript">

@@ -24,7 +24,7 @@
 	</ul>
 	<div class="info">
 		<p>설치하려면 아래 과정이 필요합니다.</p>
-		<p style="text-align: right;">[작성일: 2023-05-16]</p>
+		<p style="text-align: right;">마지막 수정 2023.05.16</p>
 		<div class="textBox">
 			<ul>
 				<li>
@@ -150,7 +150,7 @@
 	</ul>
 	<div class="info">
 		<p>아래에서 확인이 가능합니다.</p>
-		<p style="text-align: right;">[작성일: 2023-05-16]</p>
+		<p style="text-align: right;">마지막 수정 2023.05.16</p>
 
 		<div class="textBox">
 			<ul>
@@ -214,7 +214,7 @@
 		</div>
 		<div class="info">
 			<p>연결하려면 아래 과정이 필요합니다.</p>
-			<p style="text-align: right;">[작성일: 2023-05-16]</p>
+			<p style="text-align: right;">마지막 수정 2023.05.16</p>
 
 			<div class="textBox">
 				<ul>
@@ -281,12 +281,12 @@
 			</ul>
 			<div class="info">
 				<p>아래에서 확인이 가능합니다.</p>
-				<p style="text-align: right;">[작성일: 2023-05-23]</p>
+				<p style="text-align: right;">마지막 수정 2023.05.23</p>
 
 				<div class="textBox">
 					<ul>
 						<li>작성자: 박수빈</li>
-						<li>날짜: 2023년 5월 23일</li>
+						<li>마지막 수정일: 2023년 6월 7일</li>
 						<li>프로젝트 버전: v1.0.0-release</li>
 						<li>프로젝트 설명: 초기 버전입니다. 기본 기능 구현 및 초기 UI 설계가 완료되었습니다.</li>
 						<li>기능: 다크 모드(Dark Mode) - 사용자가 웹 애플리케이션의 UI를 어둡게 설정할 수 있는

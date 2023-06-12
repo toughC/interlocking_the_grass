@@ -10,7 +10,7 @@
   <body>
     <div id="map" class="map"></div>
     <script>
-    var projExtent = ol.proj.get('EPSG:3857').getExtent();
+/*     var projExtent = ol.proj.get('EPSG:3857').getExtent();
     var startResolution = ol.extent.getWidth(projExtent) / 256;
     var resolutions = new Array(22);
     for (var i = 0, ii = resolutions.length; i < ii; ++i) {
@@ -46,7 +46,7 @@
 		    center: ol.proj.fromLonLat([129.0756, 35.1795]), // 중심점 좌표 설정
 		    zoom: 10 // 초기 줌 레벨 설정
 		  })
-		});
+		}); */
     </script>
   </body>
 </html>

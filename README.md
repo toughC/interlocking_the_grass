@@ -33,4 +33,5 @@ project development guide site
 ![mobile](https://github.com/toughC/seesunguide_v1.1.5/assets/76736351/e0393a4f-985a-4042-9996-74c2fe0fbaf0)
 
 **6. Darkmode and localStorage Function**<br>
+![dark_storage](https://github.com/toughC/seesunguide_v1.1.5/assets/76736351/2a06e14b-9231-4dc9-b324-bec4df0ac9ba)
 

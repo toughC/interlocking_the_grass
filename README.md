@@ -18,7 +18,7 @@ project development guide site
 
 ## 📌 **Execution Screen**
 **1. Guide Page**<br>
-![guide](https://github.com/toughC/seesunguide_v1.1.5/assets/76736351/435600c1-cce4-40a6-97cc-e547ee0b2394)
+![guide_AdobeExpress (1)](https://github.com/toughC/seesunguide_v1.1.5/assets/76736351/08dd1343-18a2-4207-b81e-5ef53cf5d301)
 
 **2. Sample Page**<br>
 ![sample](https://github.com/toughC/seesunguide_v1.1.5/assets/76736351/b627d7ae-a6b9-4a91-8167-ffe331eb1129)

@@ -20,18 +20,17 @@ project development guide site
 **1. Guide Page**<br>
 ![guide](https://github.com/toughC/seesunguide_v1.1.5/assets/76736351/8a0b25ec-d31d-49a1-8927-16cb38771e0f)
 
-
 **2. Sample Page**<br>
-![sample](https://github.com/toughC/seesunguide_v1.1.5/assets/76736351/b627d7ae-a6b9-4a91-8167-ffe331eb1129)
+
 
 **3. Docs Page**<br>
-![docs](https://github.com/toughC/seesunguide_v1.1.5/assets/76736351/d67fe159-aab8-43a9-a68a-09d02427612a)
+![docs](https://github.com/toughC/seesunguide_v1.1.5/assets/76736351/65176cd7-ac5b-45e5-85ae-0e90e19288d9)
 
 **4. Help Page**<br>
-![help](https://github.com/toughC/seesunguide_v1.1.5/assets/76736351/ed7b5f76-c459-4e1d-9ca8-1a3c973fcf68)
+![help](https://github.com/toughC/seesunguide_v1.1.5/assets/76736351/f3bf4e4e-c9d6-4f50-b97b-6d5a4979c5e0)
 
 **5. Mobile Page**<br>
-![mobile](https://github.com/toughC/seesunguide_v1.1.5/assets/76736351/a7222689-c6aa-4392-ae0c-d705d243a9dd)
+![mobile](https://github.com/toughC/seesunguide_v1.1.5/assets/76736351/e0393a4f-985a-4042-9996-74c2fe0fbaf0)
 
 **6. Darkmode and localStorage Function**<br>
-![darkmode_localstorage](https://github.com/toughC/seesunguide_v1.1.5/assets/76736351/d2378d5b-7fa0-4089-9f5f-4eac8bccf7b5)
+

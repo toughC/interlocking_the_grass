@@ -21,8 +21,7 @@ project development guide site
 ![guide](https://github.com/toughC/seesunguide_v1.1.5/assets/76736351/8a0b25ec-d31d-49a1-8927-16cb38771e0f)
 
 **2. Sample Page**<br>
-![Uploading sample.gif…]()
-
+![sample](https://github.com/toughC/seesunguide_v1.1.5/assets/76736351/b7e151dd-a2e7-4961-ab52-49666bfb67bd)
 
 **3. Docs Page**<br>
 ![docs](https://github.com/toughC/seesunguide_v1.1.5/assets/76736351/65176cd7-ac5b-45e5-85ae-0e90e19288d9)

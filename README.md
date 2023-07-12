@@ -13,7 +13,7 @@ project development guide site
 **1. Database**: PostgreSQL 12.14<br>
 **2. Web Application Server**: Apache Tomcat 9.0<br>
 **3. Framework**: eGovFramework IDE<br>
-**4. ORM**: Spring and MyBatis<br>
+**4. SQL Mapper**: MyBatis<br>
 **5. Languages and Libraries**: Java 8, JDK 1.8.0, JSP, JavaScript, JSTL, jQuery(Ajax)<br>
 
 ## 📌 **Execution Screen**
